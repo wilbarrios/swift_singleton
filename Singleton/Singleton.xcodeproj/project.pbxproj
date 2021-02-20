@@ -10,6 +10,7 @@
 		AC5F837B25E1BB7D00350C98 /* Singleton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5F837125E1BB7D00350C98 /* Singleton.framework */; };
 		AC5F838025E1BB7D00350C98 /* SingletonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5F837F25E1BB7D00350C98 /* SingletonTests.swift */; };
 		AC5F838225E1BB7D00350C98 /* Singleton.h in Headers */ = {isa = PBXBuildFile; fileRef = AC5F837425E1BB7D00350C98 /* Singleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC5F838E25E1C17900350C98 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5F838D25E1C17900350C98 /* Singleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		AC5F837A25E1BB7D00350C98 /* SingletonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingletonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5F837F25E1BB7D00350C98 /* SingletonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonTests.swift; sourceTree = "<group>"; };
 		AC5F838125E1BB7D00350C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC5F838D25E1C17900350C98 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				AC5F837425E1BB7D00350C98 /* Singleton.h */,
 				AC5F837525E1BB7D00350C98 /* Info.plist */,
+				AC5F838D25E1C17900350C98 /* Singleton.swift */,
 			);
 			path = Singleton;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				TargetAttributes = {
 					AC5F837025E1BB7D00350C98 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					AC5F837925E1BB7D00350C98 = {
 						CreatedOnToolsVersion = 12.2;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5F838E25E1C17900350C98 /* Singleton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +345,7 @@
 		AC5F838625E1BB7D00350C98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -357,6 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wb.devs.Singleton;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -364,6 +371,7 @@
 		AC5F838725E1BB7D00350C98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -388,6 +396,7 @@
 		AC5F838925E1BB7D00350C98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 98YVJ74Y62;
@@ -406,6 +415,7 @@
 		AC5F838A25E1BB7D00350C98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 98YVJ74Y62;
