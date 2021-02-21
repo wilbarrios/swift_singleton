@@ -10,6 +10,7 @@
 		AC5F83A925E1EC3E00350C98 /* CodeDiagrams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5F839F25E1EC3E00350C98 /* CodeDiagrams.framework */; };
 		AC5F83AE25E1EC3E00350C98 /* CodeDiagramsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5F83AD25E1EC3E00350C98 /* CodeDiagramsTests.swift */; };
 		AC5F83B025E1EC3E00350C98 /* CodeDiagrams.h in Headers */ = {isa = PBXBuildFile; fileRef = AC5F83A225E1EC3E00350C98 /* CodeDiagrams.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC5F83BC25E1EC9800350C98 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5F83BB25E1EC9800350C98 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		AC5F83A825E1EC3E00350C98 /* CodeDiagramsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeDiagramsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5F83AD25E1EC3E00350C98 /* CodeDiagramsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDiagramsTests.swift; sourceTree = "<group>"; };
 		AC5F83AF25E1EC3E00350C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC5F83BB25E1EC9800350C98 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				AC5F83A225E1EC3E00350C98 /* CodeDiagrams.h */,
 				AC5F83A325E1EC3E00350C98 /* Info.plist */,
+				AC5F83BB25E1EC9800350C98 /* FeedViewController.swift */,
 			);
 			path = CodeDiagrams;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				TargetAttributes = {
 					AC5F839E25E1EC3E00350C98 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					AC5F83A725E1EC3E00350C98 = {
 						CreatedOnToolsVersion = 12.2;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5F83BC25E1EC9800350C98 /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 		AC5F83B425E1EC3E00350C98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wb.devs.CodeDiagrams;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +371,7 @@
 		AC5F83B525E1EC3E00350C98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -387,6 +395,7 @@
 		AC5F83B725E1EC3E00350C98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CodeDiagramsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +413,7 @@
 		AC5F83B825E1EC3E00350C98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CodeDiagramsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
