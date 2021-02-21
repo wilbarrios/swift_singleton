@@ -6,5 +6,6 @@
 //
 
 import Foundation
+import UIKit
 
-class FeedViewController {}
+class FeedViewController: UIViewController {}
