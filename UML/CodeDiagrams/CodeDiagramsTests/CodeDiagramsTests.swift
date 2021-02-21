@@ -8,26 +8,38 @@
 import XCTest
 @testable import CodeDiagrams
 
-class CodeDiagramsTests: XCTestCase {
+class FeedViewControllerTests: XCTestCase {
+    private typealias Item = String
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_initializationDoesntLoadAnyData() {
+        let dummyData = [makeUniqueItem(), makeUniqueItem()]
+        let sut = makeSUT(dummyData)
+        XCTAssertEqual(sut.items, [])
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func test_loadItemsOnViewDidLoad() {
+        let dummyData = [makeUniqueItem(), makeUniqueItem()]
+        let sut = makeSUT(dummyData)
+        sut.loadViewIfNeeded()
+        XCTAssertEqual(sut.items, dummyData)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    private func makeSUT(_ items: [Item], line: UInt = #line, file: StaticString = #file) -> (FeedViewController) {
+        let loader: FeedLoader = { $0(items) }
+        let sut = FeedViewController(loadFeed: loader)
+        trackMemoryLeaks(sut, file: file, line: line)
+        return sut
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    private func trackMemoryLeaks(_ sut: AnyObject, file: StaticString = #file, line: UInt = #line) {
+        addTeardownBlock {
+            [weak sut] in
+            XCTAssertNil(sut, "Potential memory leak", file: file, line: line)
         }
+    }
+    
+    private func makeUniqueItem() -> Item {
+        return "item - \(UUID().uuidString)"
     }
 
 }
