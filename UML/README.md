@@ -15,3 +15,7 @@ This class is destinated to make a screen representation for iOS platform, so, w
 The dependency of an interface (`protocol` in swift) like FeedLoadable on this example, should be like this.
 
 ![diagram_3](diagrams/driagram_3.png)
+
+A `FeedLoadable` implementation were added, as `RemoteFeedLoader` to fetch data. (i.e. Url session to make a HTTP request). In this example, `RemoteFeedLoader` comforms to `FeedLoadable` protocol.
+
+![diagram_4](diagrams/driagram_4.png)

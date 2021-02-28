@@ -29,3 +29,11 @@ class FeedProtocolViewController: UIViewController {
         }
     }
 }
+
+// MARK: - RemoteFeedLoader <FeedLoadable> implementation
+
+class RemoteFeedLoader: FeedLoadable {
+    func loadFeed(completion: @escaping ([String]) -> Void) {
+        // Url request... do something
+    }
+}
