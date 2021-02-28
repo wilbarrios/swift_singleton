@@ -19,17 +19,17 @@ final internal class SingleResponsibilityController: UIViewController {
     var saveHandler: SaveHandler!
     
     // MARK: UI Components...
-    private let saveButton: UIButton = {
-        let b = UIButton()
+    let saveButton: UIButton = {
+        let b = UIButton(type: .system)
         b.setTitle("Save", for: .normal)
-        b.addTarget(self, action: #selector(saveButtonHandler), for: .touchUpInside)
         b.translatesAutoresizingMaskIntoConstraints = false
         return b
     }()
     
     // MARK: User Interaction
     @objc
-    private func saveButtonHandler() {
+//    private
+    func saveButtonHandler() {
         saveHandler.save(completion: processSaveCompletion(_:))
     }
     
@@ -40,11 +40,17 @@ final internal class SingleResponsibilityController: UIViewController {
     }
     
     // MARK: VC Life cycle...
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
+        setupLayout()
+        addSelectors()
     }
     
     // MARK: Helpers
+    private func addSelectors() {
+        saveButton.addTarget(self, action: #selector(self.saveButtonHandler), for: .touchUpInside)
+    }
+    
     private func setupLayout() {
         let v = self.view!
         
