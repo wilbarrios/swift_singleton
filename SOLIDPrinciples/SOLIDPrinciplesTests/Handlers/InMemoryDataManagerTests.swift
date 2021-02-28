@@ -49,7 +49,22 @@ class InMemoryDataManagerTests: XCTestCase {
         XCTAssertNil(retreivedData, "Data was retreived when any data was stored")
     }
     
+    func test_retreiveCorrectDataForExpectedIds() {
+        let sut = makeSUT()
+        
+        let data1 = makeData()
+        let data2 = makeData()
+        storeItems(sut, items: [data1, data2])
+        
+        XCTAssertEqual(sut.retreive(id: data1.id), data1.item)
+        XCTAssertEqual(sut.retreive(id: data2.id), data2.item)
+    }
+    
     // MARK: Helpers
+    private func storeItems(_ sut: InMemoryDataManager, items: [(id: String, item: Model)]) {
+        items.forEach({ sut.store(id: $0.id, item: $0.item) })
+    }
+    
     private func makeData() -> (id: String, item: Model) {
         let uniqueId = makeUniqueId()
         return (uniqueId, Model())
