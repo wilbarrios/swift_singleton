@@ -11,3 +11,7 @@ Single class was created on this proyect called `FeedViewController`. This is re
 This class is destinated to make a screen representation for iOS platform, so, we added the inheritance from `UIViewController`:
 
 ![diagram_2](diagrams/diagram_2.png)
+
+The dependency of an interface (`protocol` in swift) like FeedLoadable on this example, should be like this.
+
+![diagram_3](diagrams/driagram_3.png)

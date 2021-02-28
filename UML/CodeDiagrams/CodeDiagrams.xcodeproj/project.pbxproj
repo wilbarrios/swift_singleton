@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC43C85D25EC293100732C55 /* FeedProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43C85C25EC293100732C55 /* FeedProtocolViewController.swift */; };
 		AC5F83A925E1EC3E00350C98 /* CodeDiagrams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5F839F25E1EC3E00350C98 /* CodeDiagrams.framework */; };
 		AC5F83AE25E1EC3E00350C98 /* CodeDiagramsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5F83AD25E1EC3E00350C98 /* CodeDiagramsTests.swift */; };
 		AC5F83B025E1EC3E00350C98 /* CodeDiagrams.h in Headers */ = {isa = PBXBuildFile; fileRef = AC5F83A225E1EC3E00350C98 /* CodeDiagrams.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC43C85C25EC293100732C55 /* FeedProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedProtocolViewController.swift; sourceTree = "<group>"; };
 		AC5F839F25E1EC3E00350C98 /* CodeDiagrams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodeDiagrams.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5F83A225E1EC3E00350C98 /* CodeDiagrams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeDiagrams.h; sourceTree = "<group>"; };
 		AC5F83A325E1EC3E00350C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				AC5F83A225E1EC3E00350C98 /* CodeDiagrams.h */,
 				AC5F83A325E1EC3E00350C98 /* Info.plist */,
 				AC5F83BB25E1EC9800350C98 /* FeedViewController.swift */,
+				AC43C85C25EC293100732C55 /* FeedProtocolViewController.swift */,
 			);
 			path = CodeDiagrams;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC43C85D25EC293100732C55 /* FeedProtocolViewController.swift in Sources */,
 				AC5F83BC25E1EC9800350C98 /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@ import UIKit
 
 typealias FeedLoader = (([String]) -> Void) -> Void
 
-class FeedViewController: UIViewController {
+final class FeedViewController: UIViewController {
     // MARK: Dependencies
     var loadFeed: FeedLoader!
     
