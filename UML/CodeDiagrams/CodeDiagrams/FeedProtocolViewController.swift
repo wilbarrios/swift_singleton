@@ -37,3 +37,9 @@ class RemoteFeedLoader: FeedLoadable {
         // Url request... do something
     }
 }
+
+class LocalFeedLoader: FeedLoadable {
+    func loadFeed(completion: @escaping ([String]) -> Void) {
+        // File system, CoreData... do something
+    }
+}

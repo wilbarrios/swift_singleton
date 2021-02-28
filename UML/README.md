@@ -16,6 +16,10 @@ The dependency of an interface (`protocol` in swift) like FeedLoadable on this e
 
 ![diagram_3](diagrams/driagram_3.png)
 
-A `FeedLoadable` implementation were added, as `RemoteFeedLoader` to fetch data. (i.e. Url session to make a HTTP request). In this example, `RemoteFeedLoader` comforms to `FeedLoadable` protocol.
+A `FeedLoadable` implementation were added, as `RemoteFeedLoader` to fetch data. (i.e. Url session to make a HTTP request). In this example, `RemoteFeedLoader` conforms to `FeedLoadable` protocol.
 
 ![diagram_4](diagrams/driagram_4.png)
+
+`LocalFeedLoader` implementation added, to conform `FeedLoadable`, thats the advantage of usign protocol, so the view controller, does not have to know where the data is from.
+
+![diagram_5](diagrams/driagram_5.png)
