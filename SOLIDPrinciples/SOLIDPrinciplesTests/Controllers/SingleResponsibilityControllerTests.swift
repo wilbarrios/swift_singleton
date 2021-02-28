@@ -15,6 +15,12 @@ class SingleResponsibilityControllerTests: XCTestCase {
         XCTAssertEqual(handler.triggeredActions, [], "Save was triggered on initialization.")
     }
     
+    func test_controllerLoadDoesNotSave() {
+        let (sut, handler) = makeSUT()
+        loadSUT(sut)
+        XCTAssertEqual(handler.triggeredActions, [], "Save was triggered on load.")
+    }
+    
     // MARK: Helpers
     private func loadSUT(_ sut: SingleResponsibilityController) {
         sut.loadViewIfNeeded()
