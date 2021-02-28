@@ -23,3 +23,9 @@ A `FeedLoadable` implementation were added, as `RemoteFeedLoader` to fetch data.
 `LocalFeedLoader` implementation added, to conform `FeedLoadable`, thats the advantage of usign protocol, so the view controller, does not have to know where the data is from.
 
 ![diagram_5](diagrams/driagram_5.png)
+
+`RemoteWithLocalFallbackFeedLoader` implementation were the requierement is...
+
+- If network is available, fetch the latest data. If not, retreive the stored data.
+
+![diagram_6](diagrams/driagram_6.png)

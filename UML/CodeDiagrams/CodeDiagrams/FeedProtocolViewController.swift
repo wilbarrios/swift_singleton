@@ -30,7 +30,7 @@ class FeedProtocolViewController: UIViewController {
     }
 }
 
-// MARK: - RemoteFeedLoader <FeedLoadable> implementation
+// MARK: - <FeedLoadable> implementations
 
 class RemoteFeedLoader: FeedLoadable {
     func loadFeed(completion: @escaping ([String]) -> Void) {
@@ -41,5 +41,27 @@ class RemoteFeedLoader: FeedLoadable {
 class LocalFeedLoader: FeedLoadable {
     func loadFeed(completion: @escaping ([String]) -> Void) {
         // File system, CoreData... do something
+    }
+}
+
+struct Reachability {
+    static let networkAvailable = false
+}
+
+class RemoteWithLocalFallbackFeedLoader: FeedLoadable {
+    let remote: RemoteFeedLoader
+    let local: LocalFeedLoader
+    
+    init(remote: RemoteFeedLoader, local: LocalFeedLoader) {
+        self.remote = remote
+        self.local = local
+    }
+    
+    func loadFeed(completion: @escaping ([String]) -> Void) {
+        if Reachability.networkAvailable {
+            remote.loadFeed(completion: completion)
+        } else {
+            local.loadFeed(completion: completion)
+        }
     }
 }
