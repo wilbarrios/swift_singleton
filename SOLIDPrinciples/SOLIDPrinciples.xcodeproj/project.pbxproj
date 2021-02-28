@@ -10,6 +10,8 @@
 		AC43C87425EC35DA00732C55 /* SOLIDPrinciples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC43C86A25EC35DA00732C55 /* SOLIDPrinciples.framework */; };
 		AC43C87925EC35DA00732C55 /* SOLIDPrinciplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43C87825EC35DA00732C55 /* SOLIDPrinciplesTests.swift */; };
 		AC43C87B25EC35DA00732C55 /* SOLIDPrinciples.h in Headers */ = {isa = PBXBuildFile; fileRef = AC43C86D25EC35DA00732C55 /* SOLIDPrinciples.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC43C88725EC386700732C55 /* SingleReponsibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43C88625EC386700732C55 /* SingleReponsibility.swift */; };
+		AC43C88B25EC3B9B00732C55 /* SingleResponsibilityControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43C88A25EC3B9B00732C55 /* SingleResponsibilityControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		AC43C87325EC35DA00732C55 /* SOLIDPrinciplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SOLIDPrinciplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC43C87825EC35DA00732C55 /* SOLIDPrinciplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOLIDPrinciplesTests.swift; sourceTree = "<group>"; };
 		AC43C87A25EC35DA00732C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC43C88625EC386700732C55 /* SingleReponsibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleReponsibility.swift; sourceTree = "<group>"; };
+		AC43C88A25EC3B9B00732C55 /* SingleResponsibilityControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleResponsibilityControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 			children = (
 				AC43C86D25EC35DA00732C55 /* SOLIDPrinciples.h */,
 				AC43C86E25EC35DA00732C55 /* Info.plist */,
+				AC43C88625EC386700732C55 /* SingleReponsibility.swift */,
 			);
 			path = SOLIDPrinciples;
 			sourceTree = "<group>";
@@ -80,10 +85,19 @@
 		AC43C87725EC35DA00732C55 /* SOLIDPrinciplesTests */ = {
 			isa = PBXGroup;
 			children = (
+				AC43C88E25EC3BA000732C55 /* Controllers */,
 				AC43C87825EC35DA00732C55 /* SOLIDPrinciplesTests.swift */,
 				AC43C87A25EC35DA00732C55 /* Info.plist */,
 			);
 			path = SOLIDPrinciplesTests;
+			sourceTree = "<group>";
+		};
+		AC43C88E25EC3BA000732C55 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC43C88A25EC3B9B00732C55 /* SingleResponsibilityControllerTests.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +161,7 @@
 				TargetAttributes = {
 					AC43C86925EC35DA00732C55 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					AC43C87225EC35DA00732C55 = {
 						CreatedOnToolsVersion = 12.2;
@@ -194,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC43C88725EC386700732C55 /* SingleReponsibility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC43C87925EC35DA00732C55 /* SOLIDPrinciplesTests.swift in Sources */,
+				AC43C88B25EC3B9B00732C55 /* SingleResponsibilityControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +358,7 @@
 		AC43C87F25EC35DA00732C55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wb.devs.SOLIDPrinciples;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +383,7 @@
 		AC43C88025EC35DA00732C55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -387,6 +407,7 @@
 		AC43C88225EC35DA00732C55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SOLIDPrinciplesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +425,7 @@
 		AC43C88325EC35DA00732C55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SOLIDPrinciplesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
