@@ -66,11 +66,4 @@ class SingleResponsibilityControllerTests: XCTestCase {
             triggeredActions.append(.save)
         }
     }
-    
-    func trackMemoryLeaks(_ instance: AnyObject, file: StaticString = #file, line: UInt = #line) {
-        addTeardownBlock {
-            [weak instance] in
-            XCTAssertNil(instance, "Instance was not deallocated, potential memory leak", file: file, line: line)
-        }
-    }
 }
