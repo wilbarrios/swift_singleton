@@ -59,27 +59,6 @@ class EventHandlerTests: XCTestCase {
         trackMemoryLeaks(sut, file: file, line: line)
         return (sut, service)
     }
-    
-    class EventServiceMock: EventService {
-        typealias EventCompletionHandler = ((Error?) -> Void)
-        
-        enum Action {
-            case send
-        }
-        
-        var triggeredActions = [Action]()
-        private var completions = [EventCompletionHandler]()
-        
-        
-        func send(event: String, completion: @escaping EventCompletionHandler) {
-            triggeredActions.append(.send)
-            completions.append(completion)
-        }
-        
-        func complete(withError error: Error?, index: Int = 0) {
-            completions[index](error)
-        }
-    }
 }
 
 fileprivate enum EventStub: String {
