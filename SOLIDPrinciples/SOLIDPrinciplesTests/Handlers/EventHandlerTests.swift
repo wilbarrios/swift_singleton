@@ -44,10 +44,6 @@ class EventHandlerTests: XCTestCase {
     }
     
     // MARK: Helpers
-    private func makeAnyError() -> NSError {
-        return NSError(domain: "Any error", code: 0, userInfo: nil)
-    }
-    
     private func makeAnyEvent() -> Event {
         EventStub.anyEvent
     }

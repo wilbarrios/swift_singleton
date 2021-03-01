@@ -15,4 +15,8 @@ extension XCTestCase {
             XCTAssertNil(instance, "Instance was not deallocated, potential memory leak", file: file, line: line)
         }
     }
+    
+    func makeAnyError() -> NSError {
+        return NSError(domain: "Any error", code: 0, userInfo: nil)
+    }
 }

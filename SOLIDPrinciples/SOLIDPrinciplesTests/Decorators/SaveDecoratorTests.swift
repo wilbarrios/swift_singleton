@@ -59,6 +59,16 @@ class SaveDecoratorTests: XCTestCase {
         XCTAssertEqual(service.triggeredActions, [.send])
     }
     
+    func test_decoratedSaveFailureDoesNotSendEventNotification() {
+        let (sut, decorated, service) = makeSUT()
+        
+        sut.save {_ in }
+        decorated.complete(withError: makeAnyError())
+        
+        XCTAssertEqual(decorated.triggeredActions, [.save])
+        XCTAssertEqual(service.triggeredActions, [])
+    }
+    
     func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: SaveDecorator<SaveHandlerMock>, decorated: SaveHandlerMock, eventService: EventServiceMock) {
         let service = EventServiceMock()
         let decoratedMock = SaveHandlerMock()
