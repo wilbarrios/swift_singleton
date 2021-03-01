@@ -17,6 +17,17 @@ class SaveFeatureTests: XCTestCase, SingleResponibilityTest {
         XCTAssertEqual(eventService.triggeredActions, [])
     }
     
+    func test_userTappedSaveButtonDoSuccesSaveAndSendEventToServcie() {
+        let (sut, saveHandler, eventService) = makeSUT()
+        loadController(sut)
+        
+        simulateUserDidTapOnSaveButton(sut)
+        saveHandler.complete(withError: nil)
+        
+        XCTAssertEqual(saveHandler.triggeredActions, [.save])
+        XCTAssertEqual(eventService.triggeredActions, [.send])
+    }
+    
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: SingleResponsibilityController, handler: SaveHandlerMock, eventService: EventServiceMock) {
         let eventService = EventServiceMock()
         let saveMock = SaveHandlerMock()
