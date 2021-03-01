@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AC2904B225EC73D400439B03 /* EventHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2904B125EC73D400439B03 /* EventHandlerTests.swift */; };
+		AC2904BA25EC7B4E00439B03 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2904B925EC7B4E00439B03 /* Event.swift */; };
+		AC2904C025EC7B6700439B03 /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2904BF25EC7B6700439B03 /* EventService.swift */; };
+		AC2904C425EC7B8100439B03 /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2904C325EC7B8100439B03 /* EventHandler.swift */; };
 		AC43C87425EC35DA00732C55 /* SOLIDPrinciples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC43C86A25EC35DA00732C55 /* SOLIDPrinciples.framework */; };
 		AC43C87925EC35DA00732C55 /* SOLIDPrinciplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43C87825EC35DA00732C55 /* SOLIDPrinciplesTests.swift */; };
 		AC43C87B25EC35DA00732C55 /* SOLIDPrinciples.h in Headers */ = {isa = PBXBuildFile; fileRef = AC43C86D25EC35DA00732C55 /* SOLIDPrinciples.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +33,9 @@
 
 /* Begin PBXFileReference section */
 		AC2904B125EC73D400439B03 /* EventHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHandlerTests.swift; sourceTree = "<group>"; };
+		AC2904B925EC7B4E00439B03 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		AC2904BF25EC7B6700439B03 /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		AC2904C325EC7B8100439B03 /* EventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
 		AC43C86A25EC35DA00732C55 /* SOLIDPrinciples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SOLIDPrinciples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC43C86D25EC35DA00732C55 /* SOLIDPrinciples.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOLIDPrinciples.h; sourceTree = "<group>"; };
 		AC43C86E25EC35DA00732C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +68,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC2904B525EC7AFA00439B03 /* S */ = {
+			isa = PBXGroup;
+			children = (
+				AC2904B825EC7B3D00439B03 /* Datasources */,
+				AC2904B725EC7B2000439B03 /* Events */,
+				AC2904B625EC7B1600439B03 /* Controllers */,
+			);
+			path = S;
+			sourceTree = "<group>";
+		};
+		AC2904B625EC7B1600439B03 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC43C88625EC386700732C55 /* SingleReponsibility.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AC2904B725EC7B2000439B03 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				AC2904B925EC7B4E00439B03 /* Event.swift */,
+				AC2904BF25EC7B6700439B03 /* EventService.swift */,
+				AC2904C325EC7B8100439B03 /* EventHandler.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		AC2904B825EC7B3D00439B03 /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				AC96759925EC72D100457A03 /* InMemoryDataManager.swift */,
+			);
+			path = Datasources;
+			sourceTree = "<group>";
+		};
 		AC43C86025EC35DA00732C55 = {
 			isa = PBXGroup;
 			children = (
@@ -83,10 +125,9 @@
 		AC43C86C25EC35DA00732C55 /* SOLIDPrinciples */ = {
 			isa = PBXGroup;
 			children = (
+				AC2904B525EC7AFA00439B03 /* S */,
 				AC43C86D25EC35DA00732C55 /* SOLIDPrinciples.h */,
 				AC43C86E25EC35DA00732C55 /* Info.plist */,
-				AC43C88625EC386700732C55 /* SingleReponsibility.swift */,
-				AC96759925EC72D100457A03 /* InMemoryDataManager.swift */,
 			);
 			path = SOLIDPrinciples;
 			sourceTree = "<group>";
@@ -237,8 +278,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2904C025EC7B6700439B03 /* EventService.swift in Sources */,
 				AC43C88725EC386700732C55 /* SingleReponsibility.swift in Sources */,
+				AC2904BA25EC7B4E00439B03 /* Event.swift in Sources */,
 				AC96759A25EC72D100457A03 /* InMemoryDataManager.swift in Sources */,
+				AC2904C425EC7B8100439B03 /* EventHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

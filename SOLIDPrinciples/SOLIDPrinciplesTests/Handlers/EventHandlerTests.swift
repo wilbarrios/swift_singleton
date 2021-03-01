@@ -9,27 +9,6 @@ import Foundation
 import XCTest
 @testable import SOLIDPrinciples
 
-protocol Event { var eventId: String { get } }
-
-protocol EventService {
-    func send(event: String, completion: @escaping (Error?) -> Void)
-}
-
-class EventHandler {
-    var lastSentEvent: Event?
-    
-    let service: EventService
-    
-    init(service: EventService) {
-        self.service = service
-    }
-    
-    func sendEvent(_ event: Event, completion: @escaping (Error?) -> Void = {_ in }) {
-        lastSentEvent = event
-        service.send(event: event.eventId, completion: completion)
-    }
-}
-
 class EventHandlerTests: XCTestCase {
     
     func test_initializationDoesNotSentEvents() {
