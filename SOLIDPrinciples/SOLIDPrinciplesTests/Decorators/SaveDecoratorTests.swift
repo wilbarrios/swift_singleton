@@ -49,6 +49,16 @@ class SaveDecoratorTests: XCTestCase {
         XCTAssertEqual(service.triggeredActions, [])
     }
     
+    func test_decoratedSaveSuccessSendEventNotification() {
+        let (sut, decorated, service) = makeSUT()
+        
+        sut.save {_ in }
+        decorated.complete(withError: nil)
+        
+        XCTAssertEqual(decorated.triggeredActions, [.save])
+        XCTAssertEqual(service.triggeredActions, [.send])
+    }
+    
     func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: SaveDecorator<SaveHandlerMock>, decorated: SaveHandlerMock, eventService: EventServiceMock) {
         let service = EventServiceMock()
         let decoratedMock = SaveHandlerMock()
@@ -64,10 +74,18 @@ class SaveDecoratorTests: XCTestCase {
             case save
         }
         
+        private typealias CompletionHandler = ((Error?) -> Void)
+        
         var triggeredActions = [Action]()
+        private var completions = [CompletionHandler]()
         
         func save(completion: @escaping SaveCompletionHandler) {
             triggeredActions.append(.save)
+            completions.append(completion)
+        }
+        
+        func complete(withError error: Error?, index: Int = 0) {
+            completions[0](error)
         }
     }
 }
