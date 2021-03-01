@@ -13,6 +13,7 @@
 		AC2904C425EC7B8100439B03 /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2904C325EC7B8100439B03 /* EventHandler.swift */; };
 		AC2904D125EC7C4E00439B03 /* SaveDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2904D025EC7C4E00439B03 /* SaveDecoratorTests.swift */; };
 		AC2904D725EC80E500439B03 /* EventServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2904D625EC80E500439B03 /* EventServiceMock.swift */; };
+		AC2904DE25EC847D00439B03 /* SaveDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2904DD25EC847D00439B03 /* SaveDecorator.swift */; };
 		AC43C87425EC35DA00732C55 /* SOLIDPrinciples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC43C86A25EC35DA00732C55 /* SOLIDPrinciples.framework */; };
 		AC43C87925EC35DA00732C55 /* SOLIDPrinciplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43C87825EC35DA00732C55 /* SOLIDPrinciplesTests.swift */; };
 		AC43C87B25EC35DA00732C55 /* SOLIDPrinciples.h in Headers */ = {isa = PBXBuildFile; fileRef = AC43C86D25EC35DA00732C55 /* SOLIDPrinciples.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +41,7 @@
 		AC2904C325EC7B8100439B03 /* EventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
 		AC2904D025EC7C4E00439B03 /* SaveDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDecoratorTests.swift; sourceTree = "<group>"; };
 		AC2904D625EC80E500439B03 /* EventServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServiceMock.swift; sourceTree = "<group>"; };
+		AC2904DD25EC847D00439B03 /* SaveDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDecorator.swift; sourceTree = "<group>"; };
 		AC43C86A25EC35DA00732C55 /* SOLIDPrinciples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SOLIDPrinciples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC43C86D25EC35DA00732C55 /* SOLIDPrinciples.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOLIDPrinciples.h; sourceTree = "<group>"; };
 		AC43C86E25EC35DA00732C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		AC2904B525EC7AFA00439B03 /* S */ = {
 			isa = PBXGroup;
 			children = (
+				AC2904DC25EC846F00439B03 /* Decorators */,
 				AC2904B825EC7B3D00439B03 /* Datasources */,
 				AC2904B725EC7B2000439B03 /* Events */,
 				AC2904B625EC7B1600439B03 /* Controllers */,
@@ -122,6 +125,14 @@
 				AC2904D625EC80E500439B03 /* EventServiceMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		AC2904DC25EC846F00439B03 /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				AC2904DD25EC847D00439B03 /* SaveDecorator.swift */,
+			);
+			path = Decorators;
 			sourceTree = "<group>";
 		};
 		AC43C86025EC35DA00732C55 = {
@@ -304,6 +315,7 @@
 				AC43C88725EC386700732C55 /* SingleReponsibility.swift in Sources */,
 				AC2904BA25EC7B4E00439B03 /* Event.swift in Sources */,
 				AC96759A25EC72D100457A03 /* InMemoryDataManager.swift in Sources */,
+				AC2904DE25EC847D00439B03 /* SaveDecorator.swift in Sources */,
 				AC2904C425EC7B8100439B03 /* EventHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
