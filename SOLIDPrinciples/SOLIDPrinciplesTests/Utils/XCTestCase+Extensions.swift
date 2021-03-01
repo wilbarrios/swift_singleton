@@ -19,4 +19,8 @@ extension XCTestCase {
     func makeAnyError() -> NSError {
         return NSError(domain: "Any error", code: 0, userInfo: nil)
     }
+    
+    func loadController(_ controller: UIViewController) {
+        controller.loadViewIfNeeded()
+    }
 }

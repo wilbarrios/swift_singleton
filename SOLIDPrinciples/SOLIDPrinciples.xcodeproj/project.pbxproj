@@ -14,6 +14,9 @@
 		AC2904D125EC7C4E00439B03 /* SaveDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2904D025EC7C4E00439B03 /* SaveDecoratorTests.swift */; };
 		AC2904D725EC80E500439B03 /* EventServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2904D625EC80E500439B03 /* EventServiceMock.swift */; };
 		AC2904DE25EC847D00439B03 /* SaveDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2904DD25EC847D00439B03 /* SaveDecorator.swift */; };
+		AC2904F725EC855F00439B03 /* SaveFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2904F625EC855F00439B03 /* SaveFeatureTests.swift */; };
+		AC2904FB25EC859500439B03 /* SingleReponsibilityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2904FA25EC859500439B03 /* SingleReponsibilityTest.swift */; };
+		AC2904FF25EC868C00439B03 /* SaveHandlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2904FE25EC868C00439B03 /* SaveHandlerMock.swift */; };
 		AC43C87425EC35DA00732C55 /* SOLIDPrinciples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC43C86A25EC35DA00732C55 /* SOLIDPrinciples.framework */; };
 		AC43C87925EC35DA00732C55 /* SOLIDPrinciplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43C87825EC35DA00732C55 /* SOLIDPrinciplesTests.swift */; };
 		AC43C87B25EC35DA00732C55 /* SOLIDPrinciples.h in Headers */ = {isa = PBXBuildFile; fileRef = AC43C86D25EC35DA00732C55 /* SOLIDPrinciples.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,6 +45,9 @@
 		AC2904D025EC7C4E00439B03 /* SaveDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDecoratorTests.swift; sourceTree = "<group>"; };
 		AC2904D625EC80E500439B03 /* EventServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServiceMock.swift; sourceTree = "<group>"; };
 		AC2904DD25EC847D00439B03 /* SaveDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDecorator.swift; sourceTree = "<group>"; };
+		AC2904F625EC855F00439B03 /* SaveFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFeatureTests.swift; sourceTree = "<group>"; };
+		AC2904FA25EC859500439B03 /* SingleReponsibilityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleReponsibilityTest.swift; sourceTree = "<group>"; };
+		AC2904FE25EC868C00439B03 /* SaveHandlerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveHandlerMock.swift; sourceTree = "<group>"; };
 		AC43C86A25EC35DA00732C55 /* SOLIDPrinciples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SOLIDPrinciples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC43C86D25EC35DA00732C55 /* SOLIDPrinciples.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOLIDPrinciples.h; sourceTree = "<group>"; };
 		AC43C86E25EC35DA00732C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				AC2904D625EC80E500439B03 /* EventServiceMock.swift */,
+				AC2904FE25EC868C00439B03 /* SaveHandlerMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -133,6 +140,14 @@
 				AC2904DD25EC847D00439B03 /* SaveDecorator.swift */,
 			);
 			path = Decorators;
+			sourceTree = "<group>";
+		};
+		AC2904F525EC854300439B03 /* Integrations */ = {
+			isa = PBXGroup;
+			children = (
+				AC2904F625EC855F00439B03 /* SaveFeatureTests.swift */,
+			);
+			path = Integrations;
 			sourceTree = "<group>";
 		};
 		AC43C86025EC35DA00732C55 = {
@@ -166,6 +181,7 @@
 		AC43C87725EC35DA00732C55 /* SOLIDPrinciplesTests */ = {
 			isa = PBXGroup;
 			children = (
+				AC2904F525EC854300439B03 /* Integrations */,
 				AC2904D525EC80B700439B03 /* Mocks */,
 				AC2904C725EC7C0200439B03 /* Decorators */,
 				AC96759225EC581900457A03 /* Utils */,
@@ -198,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				AC96759325EC582B00457A03 /* XCTestCase+Extensions.swift */,
+				AC2904FA25EC859500439B03 /* SingleReponsibilityTest.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -326,11 +343,14 @@
 			files = (
 				AC2904D125EC7C4E00439B03 /* SaveDecoratorTests.swift in Sources */,
 				AC96759425EC582B00457A03 /* XCTestCase+Extensions.swift in Sources */,
+				AC2904FB25EC859500439B03 /* SingleReponsibilityTest.swift in Sources */,
 				AC43C87925EC35DA00732C55 /* SOLIDPrinciplesTests.swift in Sources */,
 				AC2904D725EC80E500439B03 /* EventServiceMock.swift in Sources */,
+				AC2904FF25EC868C00439B03 /* SaveHandlerMock.swift in Sources */,
 				AC2904B225EC73D400439B03 /* EventHandlerTests.swift in Sources */,
 				AC96758F25EC578E00457A03 /* InMemoryDataManagerTests.swift in Sources */,
 				AC43C88B25EC3B9B00732C55 /* SingleResponsibilityControllerTests.swift in Sources */,
+				AC2904F725EC855F00439B03 /* SaveFeatureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
