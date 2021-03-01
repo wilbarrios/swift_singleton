@@ -14,6 +14,7 @@
 		AC43C88B25EC3B9B00732C55 /* SingleResponsibilityControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43C88A25EC3B9B00732C55 /* SingleResponsibilityControllerTests.swift */; };
 		AC96758F25EC578E00457A03 /* InMemoryDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96758E25EC578E00457A03 /* InMemoryDataManagerTests.swift */; };
 		AC96759425EC582B00457A03 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96759325EC582B00457A03 /* XCTestCase+Extensions.swift */; };
+		AC96759A25EC72D100457A03 /* InMemoryDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96759925EC72D100457A03 /* InMemoryDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		AC43C88A25EC3B9B00732C55 /* SingleResponsibilityControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleResponsibilityControllerTests.swift; sourceTree = "<group>"; };
 		AC96758E25EC578E00457A03 /* InMemoryDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryDataManagerTests.swift; sourceTree = "<group>"; };
 		AC96759325EC582B00457A03 /* XCTestCase+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extensions.swift"; sourceTree = "<group>"; };
+		AC96759925EC72D100457A03 /* InMemoryDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				AC43C86D25EC35DA00732C55 /* SOLIDPrinciples.h */,
 				AC43C86E25EC35DA00732C55 /* Info.plist */,
 				AC43C88625EC386700732C55 /* SingleReponsibility.swift */,
+				AC96759925EC72D100457A03 /* InMemoryDataManager.swift */,
 			);
 			path = SOLIDPrinciples;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC43C88725EC386700732C55 /* SingleReponsibility.swift in Sources */,
+				AC96759A25EC72D100457A03 /* InMemoryDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,21 +9,6 @@ import Foundation
 import XCTest
 @testable import SOLIDPrinciples
 
-
-class InMemoryDataManager {
-    struct InMemoryDataModel: Equatable { }
-    
-    var storedItems = [String: InMemoryDataModel]()
-    
-    func store(id: String, item: InMemoryDataModel) {
-        storedItems[id] = item
-    }
-    
-    func retreive(id: String) -> InMemoryDataModel? {
-        return storedItems[id]
-    }
-}
-
 class InMemoryDataManagerTests: XCTestCase {
     private typealias Model = InMemoryDataManager.InMemoryDataModel
     
