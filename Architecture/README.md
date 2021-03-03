@@ -29,4 +29,6 @@ Where all your `Compose` happends, where Flows/Factories/Assemblers lives.
 - `LoginPresenter` implements the `LoginUseCaseOutput`, in this case, the presenter has the responsability of make a welcome | error view model to pas it to the view controller.
 - The concreete implementation of analitics frameworks were... `CrashalyticsLoginTracker` that implements the `LoginUseCaseOutput` protocol too for analitics pourpose.
 - The `LoginUseCase` makes a reference to an `output: LoginUseCaseOutput` value, an just delivers the message. 
-...Pending... `ComposeLoginUseCase`
+- In `Main` or an `AppDelegate` we have  the concrete type `ComposeLoginUseCaseDelegate` concreete type, that is responsible for, compose all the objects, in this case.. `CrashaliticsWrapper` `FireBaseWrapper` and `LoginUseCasePresenter`
+- Main is reponsible for factoring objects, or composing, setup the application.
+- I dont need to know about composition, or concrete types, or instance them on business logic, presentation or UI.
