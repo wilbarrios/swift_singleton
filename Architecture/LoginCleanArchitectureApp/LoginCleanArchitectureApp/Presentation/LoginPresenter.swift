@@ -12,7 +12,7 @@ protocol LoginView {
     func display(errorMessage: String)
 }
 
-class LoginPresenter: LoginUseCaseOutput {
+final class LoginPresenter: LoginUseCaseOutput {
     let view: LoginView
     
     struct R {
