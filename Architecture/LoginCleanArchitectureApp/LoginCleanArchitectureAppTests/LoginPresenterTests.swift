@@ -18,7 +18,8 @@ class LoginPresenter: LoginUseCaseOutput {
     let view: LoginView
     
     struct R {
-        static let welcomeMessage = "Welcome"
+        static let welcome = "Welcome"
+        static let errorMessage = "Login failed! Try again later."
     }
     
     init(view: LoginView) {
@@ -41,7 +42,7 @@ class LoginPresenter: LoginUseCaseOutput {
     }
     
     private func makeWelcomeMessage(userName: String) -> String {
-        return "\(R.welcomeMessage) \(userName)!"
+        return "\(R.welcome) \(userName)!"
     }
 }
 
@@ -62,9 +63,22 @@ class LoginPresenterTests: XCTestCase, LoginTest {
         XCTAssertEqual(view.displayedSucceedMessage, makeExpectedWelcomeMessage(userName: user.userName))
     }
     
+    func test_loginFailed_deliversErrorMessage() {
+        let (sut, view) = makeSUT()
+        
+        sut.loginFailed(error: makeAnyError())
+        
+        XCTAssertEqual(view.triggeredActions, [.displayErrorMessage])
+        XCTAssertEqual(view.displayedErrorMessage, makeExpectedErrorMessage())
+    }
+    
     // MARK: Helpers
+    private func makeExpectedErrorMessage() -> String {
+        LoginPresenter.R.errorMessage
+    }
+    
     private func makeExpectedWelcomeMessage(userName: String) -> String {
-        "\(LoginPresenter.R.welcomeMessage) \(userName)!"
+        "\(LoginPresenter.R.welcome) \(userName)!"
     }
     
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: LoginPresenter, view: ViewMock) {
