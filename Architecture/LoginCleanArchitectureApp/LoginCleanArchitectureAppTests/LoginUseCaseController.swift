@@ -17,11 +17,13 @@ class LoginUseCaseControllerTests: XCTestCase {
         XCTAssertEqual(provider.triggeredActions, [])
     }
     
-    private func makeSUT() -> (sut: LoginUseCaseController, output: LoginUseCaseOutputMock, provider: LoginProviderMock) {
+    private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: LoginUseCaseController, output: LoginUseCaseOutputMock, provider: LoginProviderMock) {
         let p = LoginProviderMock()
         let out = LoginUseCaseOutputMock()
         let sut = LoginUseCaseController(output: out, loginProvider: p)
-        
+        trackMemoryLeaks(p, file: file, line: line)
+        trackMemoryLeaks(out, file: file, line: line)
+        trackMemoryLeaks(sut, file: file, line: line)
         return (sut, out, p)
     }
     
