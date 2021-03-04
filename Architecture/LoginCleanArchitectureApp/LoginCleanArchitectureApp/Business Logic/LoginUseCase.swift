@@ -36,8 +36,9 @@ final class LoginUseCaseController: LoginUseCase {
     
     func login(username: String, password: String) {
         let user = map(userName: username)
-        loginService.login(username: username, password: password) { [weak self] _ in
-            self?.output.loginSuceeded(user: user)
+        loginService.login(username: username, password: password) { [weak self] error in
+            guard let _error = error else { self?.output.loginSuceeded(user: user); return }
+            self?.output.loginFailed(error: _error)
         }
     }
     

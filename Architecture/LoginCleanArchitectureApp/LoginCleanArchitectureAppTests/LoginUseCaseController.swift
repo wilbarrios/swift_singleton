@@ -27,6 +27,15 @@ class LoginUseCaseControllerTests: XCTestCase {
         XCTAssertEqual(out.triggeredActions, [.loginSuceeded])
     }
     
+    func test_loginFailed_deliversLoginFailure() {
+        let (sut, out, provider) = makeSUT()
+        
+        sut.login(username: makeAnyUser(), password: makeAnyPassword())
+        provider.complete(makeAnyError())
+        
+        XCTAssertEqual(out.triggeredActions, [.loginFailed])
+    }
+    
     // MARK: Helpers
     
     private func makeAnyUser() -> String {
