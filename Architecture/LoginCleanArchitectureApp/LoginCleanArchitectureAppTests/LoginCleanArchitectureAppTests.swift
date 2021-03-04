@@ -11,7 +11,6 @@ class LoginCleanArchitectureAppTests: XCTestCase {
 
     func test_fail() {
 //        XCTFail()
-        
     }
 
 }
