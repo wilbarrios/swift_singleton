@@ -41,6 +41,15 @@ class LoginViewControllerTests: XCTestCase {
         XCTAssertNil(sut.errorLabel.text, "Error message is displayed on login succeed.")
     }
     
+    func test_loginFailed_displaysErrorMessage() {
+        let sut = makeSUT()
+        let errorMessage = makeAnyError().localizedDescription
+        sut.display(errorMessage: errorMessage)
+        
+        XCTAssertEqual(sut.errorLabel.text, errorMessage)
+        XCTAssertNil(sut.welcomeLabel.text, "Welcome message is displayed on login succeed.")
+    }
+    
     // MARK: Helpers
     private func makeAnySuccessMessage() -> String {
         "anySuccessMessage"
