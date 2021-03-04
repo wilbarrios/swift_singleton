@@ -58,22 +58,6 @@ class LoginUseCaseControllerTests: XCTestCase {
     
     // MARK: Testing entities
     
-    class LoginUseCaseOutputMock: LoginUseCaseOutput {
-        enum Action: Equatable {
-            case loginSuceeded
-            , loginFailed
-        }
-        var triggeredActions = [Action]()
-        
-        func loginSuceeded(user: User) {
-            triggeredActions.append(.loginSuceeded)
-        }
-        
-        func loginFailed(error: Error) {
-            triggeredActions.append(.loginFailed)
-        }
-    }
-    
     class LoginServiceMock: LoginService {
         
         typealias LoginResult = Error?
