@@ -32,6 +32,20 @@ class LoginViewControllerTests: XCTestCase {
         XCTAssertNil(sut.errorLabel.text, "Error message is displayed on initliazation")
     }
     
+    func test_loginSucceed_displaysWelcomeMessage() {
+        let sut = makeSUT()
+        let welcomeMessage = makeAnySuccessMessage()
+        sut.display(welcomeMessage: welcomeMessage)
+        
+        XCTAssertEqual(sut.welcomeLabel.text, welcomeMessage)
+        XCTAssertNil(sut.errorLabel.text, "Error message is displayed on login succeed.")
+    }
+    
+    // MARK: Helpers
+    private func makeAnySuccessMessage() -> String {
+        "anySuccessMessage"
+    }
+    
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> LoginViewController {
         let c = LoginViewController()
         trackMemoryLeaks(c, file: file, line: line)
