@@ -33,7 +33,7 @@ class LoginPresenter: LoginUseCaseOutput {
     }
     
     func loginFailed(error: Error) {
-        
+        view.display(errorMessage: R.errorMessage)
     }
     
     // MARK: Helpers
