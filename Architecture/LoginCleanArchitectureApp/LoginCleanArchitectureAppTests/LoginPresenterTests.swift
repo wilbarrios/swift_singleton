@@ -9,43 +9,6 @@ import Foundation
 import XCTest
 @testable import LoginCleanArchitectureApp
 
-protocol LoginView {
-    func display(welcomeMessage: String)
-    func display(errorMessage: String)
-}
-
-class LoginPresenter: LoginUseCaseOutput {
-    let view: LoginView
-    
-    struct R {
-        static let welcome = "Welcome"
-        static let errorMessage = "Login failed! Try again later."
-    }
-    
-    init(view: LoginView) {
-        self.view = view
-    }
-    
-    // MARK: Extension
-
-    func loginSuceeded(user: User) {
-        view.display(welcomeMessage: makeWelcomeMessage(userName: map(user)))
-    }
-    
-    func loginFailed(error: Error) {
-        view.display(errorMessage: R.errorMessage)
-    }
-    
-    // MARK: Helpers
-    private func map(_ user: User) -> String {
-        user.userName
-    }
-    
-    private func makeWelcomeMessage(userName: String) -> String {
-        return "\(R.welcome) \(userName)!"
-    }
-}
-
 class LoginPresenterTests: XCTestCase, LoginTest {
     func test_initializationDoesnotPresentsMessages() {
         let (_, view) = makeSUT()
