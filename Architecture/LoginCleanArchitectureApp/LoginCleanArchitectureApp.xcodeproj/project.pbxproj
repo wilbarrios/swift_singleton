@@ -14,6 +14,7 @@
 		AC00819925F06803004C9CCF /* LoginCleanArchitectureAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC00819825F06803004C9CCF /* LoginCleanArchitectureAppTests.swift */; };
 		AC0081AF25F068F3004C9CCF /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0081AE25F068F3004C9CCF /* LoginUseCase.swift */; };
 		AC0081B525F06AD0004C9CCF /* LoginUseCaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0081B425F06AD0004C9CCF /* LoginUseCaseController.swift */; };
+		AC0081BA25F06D0D004C9CCF /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0081B925F06D0D004C9CCF /* XCTestCase+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		AC00819A25F06803004C9CCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC0081AE25F068F3004C9CCF /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		AC0081B425F06AD0004C9CCF /* LoginUseCaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseController.swift; sourceTree = "<group>"; };
+		AC0081B925F06D0D004C9CCF /* XCTestCase+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		AC00819725F06803004C9CCF /* LoginCleanArchitectureAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				AC0081B825F06CF5004C9CCF /* Utils */,
 				AC00819825F06803004C9CCF /* LoginCleanArchitectureAppTests.swift */,
 				AC00819A25F06803004C9CCF /* Info.plist */,
 				AC0081B425F06AD0004C9CCF /* LoginUseCaseController.swift */,
@@ -145,6 +148,14 @@
 				AC0081AE25F068F3004C9CCF /* LoginUseCase.swift */,
 			);
 			path = "Business Logic";
+			sourceTree = "<group>";
+		};
+		AC0081B825F06CF5004C9CCF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AC0081B925F06D0D004C9CCF /* XCTestCase+Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC00819925F06803004C9CCF /* LoginCleanArchitectureAppTests.swift in Sources */,
+				AC0081BA25F06D0D004C9CCF /* XCTestCase+Extensions.swift in Sources */,
 				AC0081B525F06AD0004C9CCF /* LoginUseCaseController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
