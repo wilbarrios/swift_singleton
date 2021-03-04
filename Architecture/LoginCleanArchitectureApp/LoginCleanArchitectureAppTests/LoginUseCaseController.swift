@@ -9,7 +9,7 @@ import Foundation
 import XCTest
 @testable import LoginCleanArchitectureApp
 
-class LoginUseCaseControllerTests: XCTestCase {
+class LoginUseCaseControllerTests: XCTestCase, LoginTest {
     func test_initializationDoesNotTriggerAnyAction() {
         let (_, out, provider) = makeSUT()
         
@@ -20,7 +20,7 @@ class LoginUseCaseControllerTests: XCTestCase {
     func test_loginSucceed_deliversLoginSucces() {
         let (sut, out, provider) = makeSUT()
         
-        sut.login(username: makeAnyUser(), password: makeAnyPassword())
+        sut.login(username: makeAnyUserName(), password: makeAnyPassword())
         provider.complete(nil)
         
         XCTAssertEqual(provider.triggeredActions, [.login])
@@ -30,21 +30,13 @@ class LoginUseCaseControllerTests: XCTestCase {
     func test_loginFailed_deliversLoginFailure() {
         let (sut, out, provider) = makeSUT()
         
-        sut.login(username: makeAnyUser(), password: makeAnyPassword())
+        sut.login(username: makeAnyUserName(), password: makeAnyPassword())
         provider.complete(makeAnyError())
         
         XCTAssertEqual(out.triggeredActions, [.loginFailed])
     }
     
     // MARK: Helpers
-    
-    private func makeAnyUser() -> String {
-        return "anyUser"
-    }
-    
-    private func makeAnyPassword() -> String {
-        return "anyPassword"
-    }
     
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: LoginUseCaseController, output: LoginUseCaseOutputMock, service: LoginServiceMock) {
         let p = LoginServiceMock()
