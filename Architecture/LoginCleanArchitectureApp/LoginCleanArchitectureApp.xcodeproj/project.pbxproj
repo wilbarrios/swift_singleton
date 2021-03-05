@@ -22,6 +22,8 @@
 		AC0081E625F078F7004C9CCF /* LoginTest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0081E525F078F7004C9CCF /* LoginTest+Extensions.swift */; };
 		AC0081F025F07EEB004C9CCF /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0081EF25F07EEB004C9CCF /* LoginViewControllerTests.swift */; };
 		ACEA9DFC25F1C3DD00FCB6FB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA9DFB25F1C3DD00FCB6FB /* LoginViewController.swift */; };
+		ACEA9E0C25F1C49A00FCB6FB /* LoginUseCaseFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA9E0B25F1C49A00FCB6FB /* LoginUseCaseFactoryTests.swift */; };
+		ACEA9E1025F1C50C00FCB6FB /* LoginServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA9E0F25F1C50C00FCB6FB /* LoginServiceMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		AC0081E525F078F7004C9CCF /* LoginTest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginTest+Extensions.swift"; sourceTree = "<group>"; };
 		AC0081EF25F07EEB004C9CCF /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		ACEA9DFB25F1C3DD00FCB6FB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ACEA9E0B25F1C49A00FCB6FB /* LoginUseCaseFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseFactoryTests.swift; sourceTree = "<group>"; };
+		ACEA9E0F25F1C50C00FCB6FB /* LoginServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 				AC0081B425F06AD0004C9CCF /* LoginUseCaseController.swift */,
 				AC0081D425F075AF004C9CCF /* LoginPresenterTests.swift */,
 				AC0081EF25F07EEB004C9CCF /* LoginViewControllerTests.swift */,
+				ACEA9E0B25F1C49A00FCB6FB /* LoginUseCaseFactoryTests.swift */,
 			);
 			path = LoginCleanArchitectureAppTests;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				AC0081D925F0774D004C9CCF /* LoginUseCaseOutputMock.swift */,
+				ACEA9E0F25F1C50C00FCB6FB /* LoginServiceMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -313,7 +319,9 @@
 				AC0081BA25F06D0D004C9CCF /* XCTestCase+Extensions.swift in Sources */,
 				AC0081D525F075AF004C9CCF /* LoginPresenterTests.swift in Sources */,
 				AC0081B525F06AD0004C9CCF /* LoginUseCaseController.swift in Sources */,
+				ACEA9E1025F1C50C00FCB6FB /* LoginServiceMock.swift in Sources */,
 				AC0081E625F078F7004C9CCF /* LoginTest+Extensions.swift in Sources */,
+				ACEA9E0C25F1C49A00FCB6FB /* LoginUseCaseFactoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
