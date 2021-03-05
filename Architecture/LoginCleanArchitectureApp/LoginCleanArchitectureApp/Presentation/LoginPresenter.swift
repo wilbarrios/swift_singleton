@@ -18,6 +18,7 @@ final class LoginPresenter: LoginUseCaseOutput {
     struct R {
         static let welcome = "Welcome"
         static let errorMessage = "Login failed! Try again later."
+        static let login = "Login"
     }
     
     init(view: LoginView) {
