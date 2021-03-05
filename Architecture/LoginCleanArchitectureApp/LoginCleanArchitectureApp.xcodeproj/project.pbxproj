@@ -21,6 +21,7 @@
 		AC0081DA25F0774D004C9CCF /* LoginUseCaseOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0081D925F0774D004C9CCF /* LoginUseCaseOutputMock.swift */; };
 		AC0081E625F078F7004C9CCF /* LoginTest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0081E525F078F7004C9CCF /* LoginTest+Extensions.swift */; };
 		AC0081F025F07EEB004C9CCF /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0081EF25F07EEB004C9CCF /* LoginViewControllerTests.swift */; };
+		ACEA9DFC25F1C3DD00FCB6FB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA9DFB25F1C3DD00FCB6FB /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		AC0081D925F0774D004C9CCF /* LoginUseCaseOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseOutputMock.swift; sourceTree = "<group>"; };
 		AC0081E525F078F7004C9CCF /* LoginTest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginTest+Extensions.swift"; sourceTree = "<group>"; };
 		AC0081EF25F07EEB004C9CCF /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		ACEA9DFB25F1C3DD00FCB6FB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				AC0081AD25F068DE004C9CCF /* Business Logic */,
-				AC0081AA25F0689E004C9CCF /* Frameworks */,
-				AC0081A925F06893004C9CCF /* Analytics */,
 				AC0081A625F06872004C9CCF /* Presentation */,
 				AC0081A525F06868004C9CCF /* UI */,
 				AC0081A225F0685B004C9CCF /* Main */,
@@ -131,6 +131,7 @@
 		AC0081A525F06868004C9CCF /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				ACEA9DFB25F1C3DD00FCB6FB /* LoginViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -141,20 +142,6 @@
 				AC0081D025F07588004C9CCF /* LoginPresenter.swift */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		AC0081A925F06893004C9CCF /* Analytics */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Analytics;
-			sourceTree = "<group>";
-		};
-		AC0081AA25F0689E004C9CCF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		AC0081AD25F068DE004C9CCF /* Business Logic */ = {
@@ -307,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACEA9DFC25F1C3DD00FCB6FB /* LoginViewController.swift in Sources */,
 				AC0081D125F07588004C9CCF /* LoginPresenter.swift in Sources */,
 				AC00817E25F067F0004C9CCF /* AppDelegate.swift in Sources */,
 				AC00818025F067F0004C9CCF /* SceneDelegate.swift in Sources */,
