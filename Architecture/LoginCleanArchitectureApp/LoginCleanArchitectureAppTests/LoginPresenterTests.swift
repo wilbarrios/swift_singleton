@@ -23,7 +23,7 @@ class LoginPresenterTests: XCTestCase, LoginTest {
         sut.loginSuceeded(user: user)
         
         XCTAssertEqual(view.triggeredActions, [.displayWelcomeMessage])
-        XCTAssertEqual(view.displayedSucceedMessage, makeExpectedWelcomeMessage(userName: user.userName))
+        XCTAssertEqual(view.displayedSucceedMessage, makeExpectedWelcomeMessage(userName: user.toString))
     }
     
     func test_loginFailed_deliversErrorMessage() {

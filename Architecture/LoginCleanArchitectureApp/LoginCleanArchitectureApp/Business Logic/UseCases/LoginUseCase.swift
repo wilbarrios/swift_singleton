@@ -9,6 +9,9 @@ import Foundation
 
 struct User {
     let userName: String
+    var toString: String {
+        return userName
+    }
 }
 
 protocol LoginUseCase {

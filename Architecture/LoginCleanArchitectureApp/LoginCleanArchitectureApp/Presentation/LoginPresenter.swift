@@ -27,7 +27,7 @@ final class LoginPresenter: LoginUseCaseOutput {
     // MARK: Extension
 
     func loginSuceeded(user: User) {
-        view.display(welcomeMessage: makeWelcomeMessage(userName: map(user)))
+        view.display(welcomeMessage: makeWelcomeMessage(userName: user.toString))
     }
     
     func loginFailed(error: Error) {
@@ -35,10 +35,6 @@ final class LoginPresenter: LoginUseCaseOutput {
     }
     
     // MARK: Helpers
-    private func map(_ user: User) -> String {
-        user.userName
-    }
-    
     private func makeWelcomeMessage(userName: String) -> String {
         return "\(R.welcome) \(userName)!"
     }
