@@ -53,10 +53,12 @@ final class LoginViewController: UIViewController, LoginView {
         NSLayoutConstraint.activate([
             errorLabel.topAnchor.constraint(equalTo: safeTopAnchor, constant: applicationPadding)
             , welcomeLabel.bottomAnchor.constraint(equalTo: safeBottomAnchor, constant: -applicationPadding)
-            , userNameTextField.bottomAnchor.constraint(equalTo: view.centerYAnchor, constant: -applicationPadding)
-            , passwordTextField.topAnchor.constraint(equalTo: view.centerYAnchor, constant: applicationPadding)
-            , loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: applicationPadding)
+            , userNameTextField.bottomAnchor.constraint(equalTo: passwordTextField.topAnchor, constant: -applicationPadding)
+            , passwordTextField.bottomAnchor.constraint(equalTo: loginButton.topAnchor, constant: -applicationPadding)
+            , loginButton.bottomAnchor.constraint(equalTo: view.centerYAnchor, constant: applicationPadding)
         ])
+        
+        passwordTextField.delegate = self
     }
     
     private var safeTopAnchor: NSLayoutYAxisAnchor {
@@ -100,6 +102,7 @@ final class LoginViewController: UIViewController, LoginView {
     private func loginButtonHandler() {
         // Simple text validation
         guard let _password = password, let _userName = userName else { return }
+        view.endEditing(true)
         login?(_userName, _password)
     }
     
@@ -113,5 +116,12 @@ final class LoginViewController: UIViewController, LoginView {
     
     func display(errorMessage: String) {
         errorLabel.text = errorMessage
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        loginButtonHandler()
+        return true
     }
 }
