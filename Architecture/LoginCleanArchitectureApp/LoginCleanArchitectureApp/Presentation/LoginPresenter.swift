@@ -19,6 +19,8 @@ final class LoginPresenter: LoginUseCaseOutput {
         static let welcome = "Welcome"
         static let errorMessage = "Login failed! Try again later."
         static let login = "Login"
+        static let userName = "Username"
+        static let password = "Password"
     }
     
     init(view: LoginView) {

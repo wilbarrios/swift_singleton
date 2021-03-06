@@ -24,6 +24,7 @@
 		ACEA9DFC25F1C3DD00FCB6FB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA9DFB25F1C3DD00FCB6FB /* LoginViewController.swift */; };
 		ACEA9E0C25F1C49A00FCB6FB /* LoginUseCaseFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA9E0B25F1C49A00FCB6FB /* LoginUseCaseFactoryTests.swift */; };
 		ACEA9E1025F1C50C00FCB6FB /* LoginServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA9E0F25F1C50C00FCB6FB /* LoginServiceMock.swift */; };
+		ACEA9E1425F1CBE400FCB6FB /* LoginUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA9E1325F1CBE400FCB6FB /* LoginUseCaseFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		ACEA9DFB25F1C3DD00FCB6FB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ACEA9E0B25F1C49A00FCB6FB /* LoginUseCaseFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseFactoryTests.swift; sourceTree = "<group>"; };
 		ACEA9E0F25F1C50C00FCB6FB /* LoginServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceMock.swift; sourceTree = "<group>"; };
+		ACEA9E1325F1CBE400FCB6FB /* LoginUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				AC00817D25F067F0004C9CCF /* AppDelegate.swift */,
 				AC00817F25F067F0004C9CCF /* SceneDelegate.swift */,
+				ACEA9E1325F1CBE400FCB6FB /* LoginUseCaseFactory.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				AC00818025F067F0004C9CCF /* SceneDelegate.swift in Sources */,
 				AC0081AF25F068F3004C9CCF /* LoginUseCase.swift in Sources */,
 				AC0081C125F0743E004C9CCF /* LoginService.swift in Sources */,
+				ACEA9E1425F1CBE400FCB6FB /* LoginUseCaseFactory.swift in Sources */,
 				AC0081C925F07497004C9CCF /* LoginUseCaseController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

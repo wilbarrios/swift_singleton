@@ -9,16 +9,26 @@ import Foundation
 import UIKit
 
 final class LoginViewController: UIViewController, LoginView {
+    private typealias R = LoginPresenter.R
     // MARK: UI Components
     let errorLabel: UILabel = UILabel()
     let welcomeLabel: UILabel = UILabel()
     
-    private let userNameTextField: UITextField = UITextField()
-    private let passwordTextField: UITextField = UITextField()
+    private let userNameTextField: UITextField = {
+        let t = UITextField()
+        t.placeholder = R.userName
+        return t
+    }()
+    
+    private let passwordTextField: UITextField = {
+        let t = UITextField()
+        t.placeholder = R.password
+        return t
+    }()
     
     let loginButton: UIButton = {
         let b = UIButton()
-        b.setTitle(LoginPresenter.R.login, for: .normal)
+        b.setTitle(R.login, for: .normal)
         b.addTarget(self, action: #selector(loginButtonHandler), for: .touchUpInside)
         return b
     }()
@@ -31,6 +41,8 @@ final class LoginViewController: UIViewController, LoginView {
     
     // MARK: Helpers
     private func setupLayout() {
+        self.view.backgroundColor = UIColor.systemGray2
+        
         [errorLabel
          , welcomeLabel
          , userNameTextField
@@ -40,8 +52,8 @@ final class LoginViewController: UIViewController, LoginView {
         
         NSLayoutConstraint.activate([
             errorLabel.topAnchor.constraint(equalTo: safeTopAnchor, constant: applicationPadding)
-            , welcomeLabel.bottomAnchor.constraint(equalTo: safeBottomAnchor, constant: applicationPadding)
-            , userNameTextField.bottomAnchor.constraint(equalTo: view.centerYAnchor, constant: applicationPadding)
+            , welcomeLabel.bottomAnchor.constraint(equalTo: safeBottomAnchor, constant: -applicationPadding)
+            , userNameTextField.bottomAnchor.constraint(equalTo: view.centerYAnchor, constant: -applicationPadding)
             , passwordTextField.topAnchor.constraint(equalTo: view.centerYAnchor, constant: applicationPadding)
             , loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: applicationPadding)
         ])
@@ -66,6 +78,8 @@ final class LoginViewController: UIViewController, LoginView {
     private func setupSubview(_ subView: UIView) {
         view.addSubview(subView)
         subView.translatesAutoresizingMaskIntoConstraints = false
+        subView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        subView.backgroundColor = UIColor.orange
         fillWidth(subView)
     }
     
