@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Player Score View Controller-->
         <scene sceneID="WX0-cQ-1dW">
             <objects>
-                <viewController id="7Z6-Gt-HM2" sceneMemberID="viewController">
+                <viewController id="7Z6-Gt-HM2" customClass="PlayerScoreViewController" customModule="ModularStoryboardApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iwc-yB-KNx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,8 +19,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXM-JN-uA6">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFN-61-4Rm">
-                                        <rect key="frame" x="20" y="20" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFN-61-4Rm">
+                                        <rect key="frame" x="20" y="20" width="374" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -29,7 +29,9 @@
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstItem="jFN-61-4Rm" firstAttribute="top" secondItem="eXM-JN-uA6" secondAttribute="top" constant="20" id="8Wg-oD-qOA"/>
+                                    <constraint firstAttribute="trailing" secondItem="jFN-61-4Rm" secondAttribute="trailing" constant="20" id="fAm-7A-Sf6"/>
                                     <constraint firstItem="jFN-61-4Rm" firstAttribute="leading" secondItem="eXM-JN-uA6" secondAttribute="leading" constant="20" id="g2G-Rt-je1"/>
+                                    <constraint firstAttribute="bottom" secondItem="jFN-61-4Rm" secondAttribute="bottom" constant="20" id="y4R-El-y3D"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -43,6 +45,9 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="100"/>
+                    <connections>
+                        <outlet property="playerNameLabel" destination="jFN-61-4Rm" id="F4J-79-c0U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWb-Sp-Paa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

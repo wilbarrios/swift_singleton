@@ -11,7 +11,7 @@
         <!--Single player-->
         <scene sceneID="SmS-jz-Wuh">
             <objects>
-                <viewController id="nyB-yu-n9H" sceneMemberID="viewController">
+                <viewController id="nyB-yu-n9H" customClass="SinglePlayerViewController" customModule="ModularStoryboardApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="474-hd-xQM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

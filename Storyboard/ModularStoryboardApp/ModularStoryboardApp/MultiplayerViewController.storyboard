@@ -11,7 +11,7 @@
         <!--Multi player-->
         <scene sceneID="TOc-X3-53H">
             <objects>
-                <viewController id="NTc-UE-nmQ" sceneMemberID="viewController">
+                <viewController id="NTc-UE-nmQ" customClass="MultiplayerViewController" customModule="ModularStoryboardApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SnN-b7-2l2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

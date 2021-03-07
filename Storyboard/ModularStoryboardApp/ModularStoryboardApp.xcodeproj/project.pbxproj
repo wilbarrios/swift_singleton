@@ -17,6 +17,9 @@
 		AC22599725F5803F00711670 /* MultiplayerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC22599625F5803F00711670 /* MultiplayerViewController.storyboard */; };
 		AC22599A25F5813200711670 /* PlayerScoreView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC22599925F5813200711670 /* PlayerScoreView.storyboard */; };
 		AC2259A125F597EE00711670 /* PayerTwoScoreView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2259A025F597EE00711670 /* PayerTwoScoreView.storyboard */; };
+		AC2259A425F598F400711670 /* PayerScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2259A325F598F400711670 /* PayerScoreViewController.swift */; };
+		AC2259AC25F59A3A00711670 /* SinglePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2259AB25F59A3A00711670 /* SinglePlayerViewController.swift */; };
+		AC2259B025F59E4F00711670 /* MultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2259AF25F59E4F00711670 /* MultiplayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		AC22599625F5803F00711670 /* MultiplayerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MultiplayerViewController.storyboard; sourceTree = "<group>"; };
 		AC22599925F5813200711670 /* PlayerScoreView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayerScoreView.storyboard; sourceTree = "<group>"; };
 		AC2259A025F597EE00711670 /* PayerTwoScoreView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PayerTwoScoreView.storyboard; sourceTree = "<group>"; };
+		AC2259A325F598F400711670 /* PayerScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerScoreViewController.swift; sourceTree = "<group>"; };
+		AC2259AB25F59A3A00711670 /* SinglePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerViewController.swift; sourceTree = "<group>"; };
+		AC2259AF25F59E4F00711670 /* MultiplayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,9 @@
 				AC22599625F5803F00711670 /* MultiplayerViewController.storyboard */,
 				AC22599925F5813200711670 /* PlayerScoreView.storyboard */,
 				AC2259A025F597EE00711670 /* PayerTwoScoreView.storyboard */,
+				AC2259A325F598F400711670 /* PayerScoreViewController.swift */,
+				AC2259AB25F59A3A00711670 /* SinglePlayerViewController.swift */,
+				AC2259AF25F59E4F00711670 /* MultiplayerViewController.swift */,
 			);
 			path = ModularStoryboardApp;
 			sourceTree = "<group>";
@@ -154,8 +163,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC22597F25F57F1D00711670 /* ViewController.swift in Sources */,
+				AC2259B025F59E4F00711670 /* MultiplayerViewController.swift in Sources */,
+				AC2259A425F598F400711670 /* PayerScoreViewController.swift in Sources */,
 				AC22597B25F57F1D00711670 /* AppDelegate.swift in Sources */,
 				AC22597D25F57F1D00711670 /* SceneDelegate.swift in Sources */,
+				AC2259AC25F59A3A00711670 /* SinglePlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
