@@ -32,3 +32,12 @@ Where all your `Compose` happends, where Flows/Factories/Assemblers lives.
 - In `Main` or an `AppDelegate` we have  the concrete type `ComposeLoginUseCaseDelegate` concreete type, that is responsible for, compose all the objects, in this case.. `CrashaliticsWrapper` `FireBaseWrapper` and `LoginUseCasePresenter`
 - Main is reponsible for factoring objects, or composing, setup the application.
 - I dont need to know about composition, or concrete types, or instance them on business logic, presentation or UI.
+
+## Implementation Diagram
+
+![diagram_3](diagrams/diagram_3.png)
+An XCode iOS App Implementation
+
+### Conclusions:
+
+- `WeakRef` created to solve Presenter -> View strong reference, to prevent memory leaks on composition layer. 
