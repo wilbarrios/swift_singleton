@@ -21,3 +21,5 @@ To make this possible, whenever you assign a class instance to a property, const
 ### Solving "Strong Reference Cycles"
 
 Swift provides two ways to resolve strong reference cycles when you work with properties of class type: weak references and unowned references.
+
+Use a weak reference when the other instance has a shorter lifetime—that is, when the other instance can be deallocated first. In the Apartment example above, it’s appropriate for an apartment to be able to have no tenant at some point in its lifetime, and so a weak reference is an appropriate way to break the reference cycle in this case. In contrast, use an unowned reference when the other instance has the same lifetime or a longer lifetime.
