@@ -15,6 +15,8 @@
 		AC22598725F57F1E00711670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC22598525F57F1E00711670 /* LaunchScreen.storyboard */; };
 		AC22599025F5801400711670 /* OnePlayerViewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC22598F25F5801400711670 /* OnePlayerViewViewController.storyboard */; };
 		AC22599725F5803F00711670 /* MultiplayerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC22599625F5803F00711670 /* MultiplayerViewController.storyboard */; };
+		AC22599A25F5813200711670 /* PlayerScoreView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC22599925F5813200711670 /* PlayerScoreView.storyboard */; };
+		AC2259A125F597EE00711670 /* PayerTwoScoreView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2259A025F597EE00711670 /* PayerTwoScoreView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		AC22598825F57F1E00711670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC22598F25F5801400711670 /* OnePlayerViewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnePlayerViewViewController.storyboard; sourceTree = "<group>"; };
 		AC22599625F5803F00711670 /* MultiplayerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MultiplayerViewController.storyboard; sourceTree = "<group>"; };
+		AC22599925F5813200711670 /* PlayerScoreView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayerScoreView.storyboard; sourceTree = "<group>"; };
+		AC2259A025F597EE00711670 /* PayerTwoScoreView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PayerTwoScoreView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				AC22598825F57F1E00711670 /* Info.plist */,
 				AC22598F25F5801400711670 /* OnePlayerViewViewController.storyboard */,
 				AC22599625F5803F00711670 /* MultiplayerViewController.storyboard */,
+				AC22599925F5813200711670 /* PlayerScoreView.storyboard */,
+				AC2259A025F597EE00711670 /* PayerTwoScoreView.storyboard */,
 			);
 			path = ModularStoryboardApp;
 			sourceTree = "<group>";
@@ -130,9 +136,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2259A125F597EE00711670 /* PayerTwoScoreView.storyboard in Resources */,
 				AC22598725F57F1E00711670 /* LaunchScreen.storyboard in Resources */,
 				AC22598425F57F1E00711670 /* Assets.xcassets in Resources */,
 				AC22599025F5801400711670 /* OnePlayerViewViewController.storyboard in Resources */,
+				AC22599A25F5813200711670 /* PlayerScoreView.storyboard in Resources */,
 				AC22598225F57F1D00711670 /* Main.storyboard in Resources */,
 				AC22599725F5803F00711670 /* MultiplayerViewController.storyboard in Resources */,
 			);

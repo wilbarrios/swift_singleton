@@ -8,20 +8,66 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Multi player-->
         <scene sceneID="TOc-X3-53H">
             <objects>
                 <viewController id="NTc-UE-nmQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SnN-b7-2l2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Neg-jl-Wwu">
+                                <rect key="frame" x="20" y="64" width="177" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="wkw-zs-ZY2"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="OZU-Zh-6IL" kind="embed" id="aYN-is-rd6"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPv-jZ-HN1">
+                                <rect key="frame" x="217" y="64" width="177" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="EPF-wb-awq"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="xTQ-wS-LAs" kind="embed" id="Ecr-cg-rMH"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2fx-xK-p5q"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="CPv-jZ-HN1" firstAttribute="width" secondItem="Neg-jl-Wwu" secondAttribute="width" id="78C-FR-hbk"/>
+                            <constraint firstItem="2fx-xK-p5q" firstAttribute="trailing" secondItem="CPv-jZ-HN1" secondAttribute="trailing" constant="20" id="Yoe-1j-Q5B"/>
+                            <constraint firstItem="CPv-jZ-HN1" firstAttribute="leading" secondItem="Neg-jl-Wwu" secondAttribute="trailing" constant="20" id="lMi-jG-4eO"/>
+                            <constraint firstItem="CPv-jZ-HN1" firstAttribute="top" secondItem="2fx-xK-p5q" secondAttribute="top" constant="20" id="pUL-h9-jXz"/>
+                            <constraint firstItem="Neg-jl-Wwu" firstAttribute="leading" secondItem="2fx-xK-p5q" secondAttribute="leading" constant="20" id="qXv-rq-61P"/>
+                            <constraint firstItem="Neg-jl-Wwu" firstAttribute="top" secondItem="2fx-xK-p5q" secondAttribute="top" constant="20" id="s7v-Xz-6BB"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Multi player" id="QMP-gw-Xug"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBT-UZ-TVU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="293" y="172"/>
+            <point key="canvasLocation" x="292.75362318840581" y="171.42857142857142"/>
+        </scene>
+        <!--PlayerScoreView-->
+        <scene sceneID="EA6-BP-Jwf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlayerScoreView" id="OZU-Zh-6IL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kCm-do-Bg2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785" y="-72"/>
+        </scene>
+        <!--PayerTwoScoreView-->
+        <scene sceneID="9nv-y7-zRk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PayerTwoScoreView" id="xTQ-wS-LAs" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="25f-21-gRr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785" y="-19"/>
         </scene>
     </scenes>
     <resources>

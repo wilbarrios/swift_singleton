@@ -8,20 +8,46 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Single player-->
         <scene sceneID="SmS-jz-Wuh">
             <objects>
                 <viewController id="nyB-yu-n9H" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="474-hd-xQM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIo-aw-djn">
+                                <rect key="frame" x="20" y="64" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="aau-BQ-FCn"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="fCt-5j-Wgc" kind="embed" id="UyO-Xk-1e7"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="I8n-0C-trB"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="TIo-aw-djn" firstAttribute="top" secondItem="I8n-0C-trB" secondAttribute="top" constant="20" id="C88-pR-Nn0"/>
+                            <constraint firstItem="TIo-aw-djn" firstAttribute="leading" secondItem="I8n-0C-trB" secondAttribute="leading" constant="20" id="H09-LC-xYy"/>
+                            <constraint firstItem="I8n-0C-trB" firstAttribute="trailing" secondItem="TIo-aw-djn" secondAttribute="trailing" constant="20" id="aGK-SD-m8l"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Single player" id="cX1-hg-IbA"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swn-mr-bJf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="114" y="161"/>
+        </scene>
+        <!--PlayerScoreView-->
+        <scene sceneID="GtS-5S-PRR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlayerScoreView" id="fCt-5j-Wgc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ID8-I1-2oA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="755" y="-53"/>
         </scene>
     </scenes>
     <resources>
