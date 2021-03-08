@@ -15,4 +15,23 @@ class PlayerScoreViewControllerStoryboardTests: XCTestCase {
         
         XCTAssertTrue(storyboard.instantiateInitialViewController() is PlayerScoreViewController)
     }
+    
+    func test_playerOneView_userNameIsSettable() {
+        let sut = makeSUT()
+        
+        sut.playerName = makeAnyPlayerName()
+        
+        XCTAssertEqual(sut.playerNameLabel.text, makeAnyPlayerName())
+    }
+    
+    private func makeAnyPlayerName() -> String {
+        "AnyPlayerName"
+    }
+    
+    private func makeSUT() -> PlayerScoreViewController {
+        let storyboard = UIStoryboard(name: "PlayerScoreView", bundle: nil)
+        let vc = storyboard.instantiateInitialViewController()
+        vc?.loadViewIfNeeded()
+        return vc as! PlayerScoreViewController
+    }
 }
