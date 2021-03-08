@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "510D7F48-1EB3-4B33-B48B-67ACA03BEF73"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC44C708-32FB-4EF0-9EDA-71B562BD3D1C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModularStoryboardApp/UI/Configurators/SinglePlayerViewControllerConfigurator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "player"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "BC44C708-32FB-4EF0-9EDA-71B562BD3D1C - 93a3ae0521be4be3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ModularStoryboardApp.SinglePlayerViewControllerConfigurator.(player in _D7B9AFF2E2200F2BCFF006D92B7A095A).didset : Swift.Optional&lt;__C.UIViewController&gt;"
+                  moduleName = "ModularStoryboardApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wbarrios/Documents/projects/swift%20studies/swift_singleton/Storyboard/ModularStoryboardApp/ModularStoryboardApp/UI/Configurators/SinglePlayerViewControllerConfigurator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "BC44C708-32FB-4EF0-9EDA-71B562BD3D1C - 23cb509ac4e4aedb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIViewController, Foundation.NSKeyValueObservedChange&lt;Swift.Optional&lt;__C.UIViewController&gt;&gt;) -&gt; () in ModularStoryboardApp.SinglePlayerViewControllerConfigurator.(player in _D7B9AFF2E2200F2BCFF006D92B7A095A).didset : Swift.Optional&lt;__C.UIViewController&gt;"
+                  moduleName = "ModularStoryboardApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wbarrios/Documents/projects/swift%20studies/swift_singleton/Storyboard/ModularStoryboardApp/ModularStoryboardApp/UI/Configurators/SinglePlayerViewControllerConfigurator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "106">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

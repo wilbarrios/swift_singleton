@@ -38,6 +38,11 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swn-mr-bJf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="VJn-S6-le6" customClass="SinglePlayerViewControllerConfigurator" customModule="ModularStoryboardApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="player" destination="nyB-yu-n9H" id="nML-hG-PzF"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="114" y="161"/>
         </scene>

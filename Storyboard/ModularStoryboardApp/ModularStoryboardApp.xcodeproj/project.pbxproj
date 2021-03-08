@@ -21,6 +21,7 @@
 		AC2259AC25F59A3A00711670 /* SinglePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2259AB25F59A3A00711670 /* SinglePlayerViewController.swift */; };
 		AC2259B025F59E4F00711670 /* MultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2259AF25F59E4F00711670 /* MultiplayerViewController.swift */; };
 		AC2259C725F5A78400711670 /* PlayerScoreViewControllerStoryboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2259C625F5A78400711670 /* PlayerScoreViewControllerStoryboardTests.swift */; };
+		AC9CDECA25F5AB7B00F9DE7F /* SinglePlayerViewControllerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CDEC925F5AB7B00F9DE7F /* SinglePlayerViewControllerConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		AC2259BA25F5A76200711670 /* ModularStoryboardAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModularStoryboardAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2259BE25F5A76200711670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC2259C625F5A78400711670 /* PlayerScoreViewControllerStoryboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScoreViewControllerStoryboardTests.swift; sourceTree = "<group>"; };
+		AC9CDEC925F5AB7B00F9DE7F /* SinglePlayerViewControllerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerViewControllerConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		AC2259B225F5A57E00711670 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				AC9CDEC825F5AB6300F9DE7F /* Configurators */,
 				AC2259B425F5A59500711670 /* ViewControllers */,
 				AC2259B325F5A58300711670 /* Storyboards */,
 			);
@@ -150,6 +153,14 @@
 				AC2259C625F5A78400711670 /* PlayerScoreViewControllerStoryboardTests.swift */,
 			);
 			path = ModularStoryboardAppTests;
+			sourceTree = "<group>";
+		};
+		AC9CDEC825F5AB6300F9DE7F /* Configurators */ = {
+			isa = PBXGroup;
+			children = (
+				AC9CDEC925F5AB7B00F9DE7F /* SinglePlayerViewControllerConfigurator.swift */,
+			);
+			path = Configurators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 				AC22597F25F57F1D00711670 /* ViewController.swift in Sources */,
 				AC2259B025F59E4F00711670 /* MultiplayerViewController.swift in Sources */,
 				AC2259A425F598F400711670 /* PayerScoreViewController.swift in Sources */,
+				AC9CDECA25F5AB7B00F9DE7F /* SinglePlayerViewControllerConfigurator.swift in Sources */,
 				AC22597B25F57F1D00711670 /* AppDelegate.swift in Sources */,
 				AC22597D25F57F1D00711670 /* SceneDelegate.swift in Sources */,
 				AC2259AC25F59A3A00711670 /* SinglePlayerViewController.swift in Sources */,

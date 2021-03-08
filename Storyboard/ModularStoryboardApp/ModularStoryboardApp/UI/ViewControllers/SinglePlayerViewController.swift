@@ -10,9 +10,7 @@ import UIKit
 
 class SinglePlayerViewController: UIViewController {
     
-    private var playerScoreView: PlayerScoreViewController? {
-        children.compactMap({ $0 as? PlayerScoreViewController }).first
-    }
+    var playerScoreView: PlayerScoreViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
