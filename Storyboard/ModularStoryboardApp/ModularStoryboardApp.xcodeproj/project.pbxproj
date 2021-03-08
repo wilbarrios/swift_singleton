@@ -20,7 +20,18 @@
 		AC2259A425F598F400711670 /* PayerScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2259A325F598F400711670 /* PayerScoreViewController.swift */; };
 		AC2259AC25F59A3A00711670 /* SinglePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2259AB25F59A3A00711670 /* SinglePlayerViewController.swift */; };
 		AC2259B025F59E4F00711670 /* MultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2259AF25F59E4F00711670 /* MultiplayerViewController.swift */; };
+		AC2259C725F5A78400711670 /* PlayerScoreViewControllerStoryboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2259C625F5A78400711670 /* PlayerScoreViewControllerStoryboardTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC2259BF25F5A76200711670 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC22596F25F57F1D00711670 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC22597625F57F1D00711670;
+			remoteInfo = ModularStoryboardApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AC22597725F57F1D00711670 /* ModularStoryboardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModularStoryboardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,10 +49,20 @@
 		AC2259A325F598F400711670 /* PayerScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerScoreViewController.swift; sourceTree = "<group>"; };
 		AC2259AB25F59A3A00711670 /* SinglePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerViewController.swift; sourceTree = "<group>"; };
 		AC2259AF25F59E4F00711670 /* MultiplayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerViewController.swift; sourceTree = "<group>"; };
+		AC2259BA25F5A76200711670 /* ModularStoryboardAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModularStoryboardAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2259BE25F5A76200711670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC2259C625F5A78400711670 /* PlayerScoreViewControllerStoryboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScoreViewControllerStoryboardTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AC22597425F57F1D00711670 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2259B725F5A76100711670 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				AC22597925F57F1D00711670 /* ModularStoryboardApp */,
+				AC2259BB25F5A76200711670 /* ModularStoryboardAppTests */,
 				AC22597825F57F1D00711670 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				AC22597725F57F1D00711670 /* ModularStoryboardApp.app */,
+				AC2259BA25F5A76200711670 /* ModularStoryboardAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,6 +143,15 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		AC2259BB25F5A76200711670 /* ModularStoryboardAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC2259BE25F5A76200711670 /* Info.plist */,
+				AC2259C625F5A78400711670 /* PlayerScoreViewControllerStoryboardTests.swift */,
+			);
+			path = ModularStoryboardAppTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +172,24 @@
 			productReference = AC22597725F57F1D00711670 /* ModularStoryboardApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AC2259B925F5A76100711670 /* ModularStoryboardAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC2259C125F5A76200711670 /* Build configuration list for PBXNativeTarget "ModularStoryboardAppTests" */;
+			buildPhases = (
+				AC2259B625F5A76100711670 /* Sources */,
+				AC2259B725F5A76100711670 /* Frameworks */,
+				AC2259B825F5A76100711670 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC2259C025F5A76200711670 /* PBXTargetDependency */,
+			);
+			name = ModularStoryboardAppTests;
+			productName = ModularStoryboardAppTests;
+			productReference = AC2259BA25F5A76200711670 /* ModularStoryboardAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -151,6 +201,10 @@
 				TargetAttributes = {
 					AC22597625F57F1D00711670 = {
 						CreatedOnToolsVersion = 12.2;
+					};
+					AC2259B925F5A76100711670 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = AC22597625F57F1D00711670;
 					};
 				};
 			};
@@ -168,6 +222,7 @@
 			projectRoot = "";
 			targets = (
 				AC22597625F57F1D00711670 /* ModularStoryboardApp */,
+				AC2259B925F5A76100711670 /* ModularStoryboardAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +242,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AC2259B825F5A76100711670 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -203,7 +265,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AC2259B625F5A76100711670 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC2259C725F5A78400711670 /* PlayerScoreViewControllerStoryboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC2259C025F5A76200711670 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC22597625F57F1D00711670 /* ModularStoryboardApp */;
+			targetProxy = AC2259BF25F5A76200711670 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AC22598025F57F1D00711670 /* Main.storyboard */ = {
@@ -377,6 +455,44 @@
 			};
 			name = Release;
 		};
+		AC2259C225F5A76200711670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ModularStoryboardAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wb.devs.ModularStoryboardAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ModularStoryboardApp.app/ModularStoryboardApp";
+			};
+			name = Debug;
+		};
+		AC2259C325F5A76200711670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ModularStoryboardAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wb.devs.ModularStoryboardAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ModularStoryboardApp.app/ModularStoryboardApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -394,6 +510,15 @@
 			buildConfigurations = (
 				AC22598C25F57F1E00711670 /* Debug */,
 				AC22598D25F57F1E00711670 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC2259C125F5A76200711670 /* Build configuration list for PBXNativeTarget "ModularStoryboardAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC2259C225F5A76200711670 /* Debug */,
+				AC2259C325F5A76200711670 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
