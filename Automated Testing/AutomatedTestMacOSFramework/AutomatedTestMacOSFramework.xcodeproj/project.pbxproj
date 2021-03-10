@@ -8,12 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		AC4114F925F8649F00E0E3C1 /* AutomatedTestMacOSFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = AC4114F725F8649F00E0E3C1 /* AutomatedTestMacOSFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC41150725F864C000E0E3C1 /* AutomatedTestMacOSFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41150625F864C000E0E3C1 /* AutomatedTestMacOSFrameworkTests.swift */; };
+		AC41150925F864C000E0E3C1 /* AutomatedTestMacOSFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4114F425F8649F00E0E3C1 /* AutomatedTestMacOSFramework.framework */; };
+		AC41151825F864EA00E0E3C1 /* AutomatedTestMacOSFrameworkCITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC41151725F864EA00E0E3C1 /* AutomatedTestMacOSFrameworkCITests.swift */; };
+		AC41151A25F864EA00E0E3C1 /* AutomatedTestMacOSFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4114F425F8649F00E0E3C1 /* AutomatedTestMacOSFramework.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC41150A25F864C000E0E3C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC4114EB25F8649F00E0E3C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC4114F325F8649F00E0E3C1;
+			remoteInfo = AutomatedTestMacOSFramework;
+		};
+		AC41151B25F864EA00E0E3C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC4114EB25F8649F00E0E3C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC4114F325F8649F00E0E3C1;
+			remoteInfo = AutomatedTestMacOSFramework;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AC4114F425F8649F00E0E3C1 /* AutomatedTestMacOSFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AutomatedTestMacOSFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC4114F725F8649F00E0E3C1 /* AutomatedTestMacOSFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutomatedTestMacOSFramework.h; sourceTree = "<group>"; };
 		AC4114F825F8649F00E0E3C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC41150425F864C000E0E3C1 /* AutomatedTestMacOSFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomatedTestMacOSFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC41150625F864C000E0E3C1 /* AutomatedTestMacOSFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomatedTestMacOSFrameworkTests.swift; sourceTree = "<group>"; };
+		AC41150825F864C000E0E3C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC41151525F864EA00E0E3C1 /* AutomatedTestMacOSFrameworkCITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomatedTestMacOSFrameworkCITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC41151725F864EA00E0E3C1 /* AutomatedTestMacOSFrameworkCITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomatedTestMacOSFrameworkCITests.swift; sourceTree = "<group>"; };
+		AC41151925F864EA00E0E3C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +51,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AC41150125F864C000E0E3C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC41150925F864C000E0E3C1 /* AutomatedTestMacOSFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC41151225F864EA00E0E3C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC41151A25F864EA00E0E3C1 /* AutomatedTestMacOSFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -31,6 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				AC4114F625F8649F00E0E3C1 /* AutomatedTestMacOSFramework */,
+				AC41150525F864C000E0E3C1 /* AutomatedTestMacOSFrameworkTests */,
+				AC41151625F864EA00E0E3C1 /* AutomatedTestMacOSFrameworkCITests */,
 				AC4114F525F8649F00E0E3C1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				AC4114F425F8649F00E0E3C1 /* AutomatedTestMacOSFramework.framework */,
+				AC41150425F864C000E0E3C1 /* AutomatedTestMacOSFrameworkTests.xctest */,
+				AC41151525F864EA00E0E3C1 /* AutomatedTestMacOSFrameworkCITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -50,6 +97,24 @@
 				AC4114F825F8649F00E0E3C1 /* Info.plist */,
 			);
 			path = AutomatedTestMacOSFramework;
+			sourceTree = "<group>";
+		};
+		AC41150525F864C000E0E3C1 /* AutomatedTestMacOSFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC41150625F864C000E0E3C1 /* AutomatedTestMacOSFrameworkTests.swift */,
+				AC41150825F864C000E0E3C1 /* Info.plist */,
+			);
+			path = AutomatedTestMacOSFrameworkTests;
+			sourceTree = "<group>";
+		};
+		AC41151625F864EA00E0E3C1 /* AutomatedTestMacOSFrameworkCITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC41151725F864EA00E0E3C1 /* AutomatedTestMacOSFrameworkCITests.swift */,
+				AC41151925F864EA00E0E3C1 /* Info.plist */,
+			);
+			path = AutomatedTestMacOSFrameworkCITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,15 +149,58 @@
 			productReference = AC4114F425F8649F00E0E3C1 /* AutomatedTestMacOSFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		AC41150325F864C000E0E3C1 /* AutomatedTestMacOSFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC41150C25F864C000E0E3C1 /* Build configuration list for PBXNativeTarget "AutomatedTestMacOSFrameworkTests" */;
+			buildPhases = (
+				AC41150025F864C000E0E3C1 /* Sources */,
+				AC41150125F864C000E0E3C1 /* Frameworks */,
+				AC41150225F864C000E0E3C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC41150B25F864C000E0E3C1 /* PBXTargetDependency */,
+			);
+			name = AutomatedTestMacOSFrameworkTests;
+			productName = AutomatedTestMacOSFrameworkTests;
+			productReference = AC41150425F864C000E0E3C1 /* AutomatedTestMacOSFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC41151425F864EA00E0E3C1 /* AutomatedTestMacOSFrameworkCITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC41151D25F864EA00E0E3C1 /* Build configuration list for PBXNativeTarget "AutomatedTestMacOSFrameworkCITests" */;
+			buildPhases = (
+				AC41151125F864EA00E0E3C1 /* Sources */,
+				AC41151225F864EA00E0E3C1 /* Frameworks */,
+				AC41151325F864EA00E0E3C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC41151C25F864EA00E0E3C1 /* PBXTargetDependency */,
+			);
+			name = AutomatedTestMacOSFrameworkCITests;
+			productName = AutomatedTestMacOSFrameworkCITests;
+			productReference = AC41151525F864EA00E0E3C1 /* AutomatedTestMacOSFrameworkCITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		AC4114EB25F8649F00E0E3C1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					AC4114F325F8649F00E0E3C1 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					AC41150325F864C000E0E3C1 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					AC41151425F864EA00E0E3C1 = {
 						CreatedOnToolsVersion = 12.2;
 					};
 				};
@@ -111,12 +219,28 @@
 			projectRoot = "";
 			targets = (
 				AC4114F325F8649F00E0E3C1 /* AutomatedTestMacOSFramework */,
+				AC41150325F864C000E0E3C1 /* AutomatedTestMacOSFrameworkTests */,
+				AC41151425F864EA00E0E3C1 /* AutomatedTestMacOSFrameworkCITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AC4114F225F8649F00E0E3C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC41150225F864C000E0E3C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC41151325F864EA00E0E3C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,7 +257,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AC41150025F864C000E0E3C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC41150725F864C000E0E3C1 /* AutomatedTestMacOSFrameworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC41151125F864EA00E0E3C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC41151825F864EA00E0E3C1 /* AutomatedTestMacOSFrameworkCITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC41150B25F864C000E0E3C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC4114F325F8649F00E0E3C1 /* AutomatedTestMacOSFramework */;
+			targetProxy = AC41150A25F864C000E0E3C1 /* PBXContainerItemProxy */;
+		};
+		AC41151C25F864EA00E0E3C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC4114F325F8649F00E0E3C1 /* AutomatedTestMacOSFramework */;
+			targetProxy = AC41151B25F864EA00E0E3C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AC4114FA25F8649F00E0E3C1 /* Debug */ = {
@@ -303,6 +456,74 @@
 			};
 			name = Release;
 		};
+		AC41150D25F864C000E0E3C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AutomatedTestMacOSFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wb.devs.AutomatedTestMacOSFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AC41150E25F864C000E0E3C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AutomatedTestMacOSFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wb.devs.AutomatedTestMacOSFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AC41151E25F864EA00E0E3C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AutomatedTestMacOSFrameworkCITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wb.devs.AutomatedTestMacOSFrameworkCITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AC41151F25F864EA00E0E3C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AutomatedTestMacOSFrameworkCITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wb.devs.AutomatedTestMacOSFrameworkCITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -320,6 +541,24 @@
 			buildConfigurations = (
 				AC4114FD25F8649F00E0E3C1 /* Debug */,
 				AC4114FE25F8649F00E0E3C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC41150C25F864C000E0E3C1 /* Build configuration list for PBXNativeTarget "AutomatedTestMacOSFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC41150D25F864C000E0E3C1 /* Debug */,
+				AC41150E25F864C000E0E3C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC41151D25F864EA00E0E3C1 /* Build configuration list for PBXNativeTarget "AutomatedTestMacOSFrameworkCITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC41151E25F864EA00E0E3C1 /* Debug */,
+				AC41151F25F864EA00E0E3C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
