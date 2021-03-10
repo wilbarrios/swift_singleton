@@ -19,3 +19,8 @@ An Xcode scheme defines a collection of targets to build, a configuration to use
 *You can have as many schemes as you want, but only one can be active at a time*. You can specify whether a scheme should be stored in a project—in which case it’s available in every workspace that includes that project, or in the workspace—in which case it’s available only in that workspace. When you select an active scheme, you also select a run destination (that is, the architecture of the hardware for which the products are built).
 
 [Developer Apple](https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Schemes.html#//apple_ref/doc/uid/TP40009328-CH8-SW1)
+
+Run test scheme by terminal
+
+```sh
+xcodebuild test -project *project_folder*/*project_name*.xcodeproj -scheme "CI"
