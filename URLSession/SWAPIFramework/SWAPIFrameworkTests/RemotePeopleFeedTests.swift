@@ -7,26 +7,7 @@
 
 import Foundation
 import XCTest
-
-protocol HTTPClient {
-    func get(from url: URL)
-}
-
-class RemotePeopleFeed {
-    // MARK: Properties
-    let client: HTTPClient
-    let url: URL
-    
-    // MARK: Inits
-    init(url: URL, client: HTTPClient) {
-        self.client = client
-        self.url = url
-    }
-    
-    func load() {
-        self.client.get(from: url)
-    }
-}
+@testable import SWAPIFramework
 
 class RemotePeopleFeedTests: XCTestCase {
     func test_init_doesNotRequestDataFromURL() {

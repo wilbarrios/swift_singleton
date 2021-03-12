@@ -11,6 +11,8 @@
 		AC5C6BA125FAFDA3000FD324 /* SWAPIFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5C6B8C25FAFD2E000FD324 /* SWAPIFramework.framework */; };
 		AC5C6BB825FB014A000FD324 /* RemotePeopleFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C6BB725FB014A000FD324 /* RemotePeopleFeedTests.swift */; };
 		AC5C6BBF25FB02E2000FD324 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C6BBE25FB02E2000FD324 /* XCTestCase+Extensions.swift */; };
+		AC5C6BC625FB0940000FD324 /* RemotePeopleFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C6BC525FB0940000FD324 /* RemotePeopleFeed.swift */; };
+		AC5C6BCA25FB094E000FD324 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C6BC925FB094E000FD324 /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,8 @@
 		AC5C6BA025FAFDA3000FD324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC5C6BB725FB014A000FD324 /* RemotePeopleFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePeopleFeedTests.swift; sourceTree = "<group>"; };
 		AC5C6BBE25FB02E2000FD324 /* XCTestCase+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extensions.swift"; sourceTree = "<group>"; };
+		AC5C6BC525FB0940000FD324 /* RemotePeopleFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePeopleFeed.swift; sourceTree = "<group>"; };
+		AC5C6BC925FB094E000FD324 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 		AC5C6B8E25FAFD2E000FD324 /* SWAPIFramework */ = {
 			isa = PBXGroup;
 			children = (
+				AC5C6BC425FB0923000FD324 /* Feed API */,
 				AC5C6B8F25FAFD2E000FD324 /* SWAPIFramework.h */,
 				AC5C6B9025FAFD2E000FD324 /* Info.plist */,
 			);
@@ -95,6 +100,15 @@
 				AC5C6BBE25FB02E2000FD324 /* XCTestCase+Extensions.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		AC5C6BC425FB0923000FD324 /* Feed API */ = {
+			isa = PBXGroup;
+			children = (
+				AC5C6BC525FB0940000FD324 /* RemotePeopleFeed.swift */,
+				AC5C6BC925FB094E000FD324 /* HTTPClient.swift */,
+			);
+			path = "Feed API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +172,7 @@
 				TargetAttributes = {
 					AC5C6B8B25FAFD2E000FD324 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					AC5C6B9B25FAFDA3000FD324 = {
 						CreatedOnToolsVersion = 12.2;
@@ -205,6 +220,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5C6BCA25FB094E000FD324 /* HTTPClient.swift in Sources */,
+				AC5C6BC625FB0940000FD324 /* RemotePeopleFeed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +369,7 @@
 		AC5C6B9525FAFD2E000FD324 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -368,6 +386,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wb.devs.SWAPIFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -375,6 +394,7 @@
 		AC5C6B9625FAFD2E000FD324 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -398,6 +418,7 @@
 		AC5C6BA525FAFDA3000FD324 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SWAPIFrameworkTests/Info.plist;
@@ -415,6 +436,7 @@
 		AC5C6BA625FAFDA3000FD324 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SWAPIFrameworkTests/Info.plist;
