@@ -10,6 +10,7 @@
 		AC5C6B9125FAFD2E000FD324 /* SWAPIFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = AC5C6B8F25FAFD2E000FD324 /* SWAPIFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC5C6B9F25FAFDA3000FD324 /* SWAPIFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C6B9E25FAFDA3000FD324 /* SWAPIFrameworkTests.swift */; };
 		AC5C6BA125FAFDA3000FD324 /* SWAPIFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5C6B8C25FAFD2E000FD324 /* SWAPIFramework.framework */; };
+		AC5C6BB825FB014A000FD324 /* RemotePeopleFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C6BB725FB014A000FD324 /* RemotePeopleFeedTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		AC5C6B9C25FAFDA3000FD324 /* SWAPIFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWAPIFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5C6B9E25FAFDA3000FD324 /* SWAPIFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAPIFrameworkTests.swift; sourceTree = "<group>"; };
 		AC5C6BA025FAFDA3000FD324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC5C6BB725FB014A000FD324 /* RemotePeopleFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePeopleFeedTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				AC5C6B9E25FAFDA3000FD324 /* SWAPIFrameworkTests.swift */,
 				AC5C6BA025FAFDA3000FD324 /* Info.plist */,
+				AC5C6BB725FB014A000FD324 /* RemotePeopleFeedTests.swift */,
 			);
 			path = SWAPIFrameworkTests;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5C6BB825FB014A000FD324 /* RemotePeopleFeedTests.swift in Sources */,
 				AC5C6B9F25FAFDA3000FD324 /* SWAPIFrameworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
