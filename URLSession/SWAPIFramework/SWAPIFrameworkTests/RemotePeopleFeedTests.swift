@@ -31,10 +31,11 @@ class RemotePeopleFeedTests: XCTestCase {
     
     // MARK: Helpers
     
-    private func makeSUT() -> (sut: RemotePeopleFeed, client: HTTPClientSpy) {
+    private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: RemotePeopleFeed, client: HTTPClientSpy) {
         let client = HTTPClientSpy()
         let sut = RemotePeopleFeed(client: client)
-        
+        trackMemoryLeaks(client, file: file, line: line)
+        trackMemoryLeaks(sut, file: file, line: line)
         return (sut, client)
     }
     
