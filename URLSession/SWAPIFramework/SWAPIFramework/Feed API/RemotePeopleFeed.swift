@@ -18,7 +18,14 @@ class RemotePeopleFeed {
         self.url = url
     }
     
-    func load() {
-        self.client.get(from: url)
+    func load(completion: @escaping (NSError?) -> Void) {
+        self.client.get(from: url) {
+            result in
+            switch result {
+            case .failure(let e):
+                completion(e as NSError)
+            default: break
+            }
+        }
     }
 }
