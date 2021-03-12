@@ -8,6 +8,10 @@
 import Foundation
 
 class RemotePeopleFeed {
+    enum Error: Swift.Error, Equatable {
+        case connectivity
+    }
+    
     // MARK: Properties
     let client: HTTPClient
     let url: URL
@@ -18,12 +22,12 @@ class RemotePeopleFeed {
         self.url = url
     }
     
-    func load(completion: @escaping (NSError?) -> Void) {
+    func load(completion: @escaping (Error) -> Void) {
         self.client.get(from: url) {
             result in
             switch result {
-            case .failure(let e):
-                completion(e as NSError)
+            case .failure(_):
+                completion(.connectivity)
             default: break
             }
         }

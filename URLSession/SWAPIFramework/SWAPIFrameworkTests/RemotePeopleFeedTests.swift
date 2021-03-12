@@ -35,19 +35,19 @@ class RemotePeopleFeedTests: XCTestCase {
         XCTAssertEqual(client.requestedURLs, [url, url])
     }
     
-    func test_load_deliversErrorOnClientError() {
+    func test_load_deliversConnectivityErrorOnClientError() {
         let (sut, client) = makeSUT()
         
-        let expectedError = makeAnyError()
-        var resultError: NSError?
+        let clientError = makeAnyError()
+        var capturedErrors = [RemotePeopleFeed.Error]()
         sut.load {
             error in
-            resultError = error
+            capturedErrors.append(error)
         }
         
-        client.complete(withError: expectedError)
+        client.complete(withError: clientError)
         
-        XCTAssertEqual(resultError, expectedError)
+        XCTAssertEqual(capturedErrors, [.connectivity]) // We consider order and quantity
     }
     
     // MARK: Helpers
@@ -72,13 +72,20 @@ class RemotePeopleFeedTests: XCTestCase {
     
     private class HTTPClientSpy: HTTPClient {
         
-        var requestedURLs = [URL]()
-        private typealias HTTPClientCompletionHandler = ((HTTPClientResult) -> Void)
-        private var completions = [HTTPClientCompletionHandler]()
+        private typealias HTTPClientCompletionHandler = (HTTPClientResult) -> Void
+        
+        private var messages = [(url: URL, completion: HTTPClientCompletionHandler)]() // If we need to consider more values, we just need to add it to the tuple
+        
+        var requestedURLs: [URL] {
+            return messages.map({ $0.url })
+        }
+        
+        private var completions: [HTTPClientCompletionHandler] {
+            return messages.map({ $0.completion })
+        }
         
         func get(from url: URL, completion: @escaping (HTTPClientResult) -> Void) {
-            requestedURLs.append(url)
-            completions.append(completion)
+            messages.append((url, completion))
         }
         
         func complete(withError error: NSError, index: Int = 0) {
