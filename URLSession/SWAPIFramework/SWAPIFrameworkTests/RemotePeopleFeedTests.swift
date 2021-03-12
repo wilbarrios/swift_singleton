@@ -15,10 +15,16 @@ protocol HTTPClient {
 class RemotePeopleFeed {
     // MARK: Properties
     let client: HTTPClient
+    let url: URL
     
     // MARK: Inits
-    init(client: HTTPClient) {
+    init(url: URL, client: HTTPClient) {
         self.client = client
+        self.url = url
+    }
+    
+    func load() {
+        self.client.get(from: url)
     }
 }
 
@@ -29,11 +35,24 @@ class RemotePeopleFeedTests: XCTestCase {
         XCTAssertNil(client.requestedURL, "Initialization requests data from URL")
     }
     
+    func test_load_requestsDataFromURL() {
+        let url = makeAnyURL()
+        let (sut, client) = makeSUT(url: url)
+        
+        sut.load()
+        
+        XCTAssertEqual(client.requestedURL, url)
+    }
+    
     // MARK: Helpers
     
-    private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: RemotePeopleFeed, client: HTTPClientSpy) {
+    private func makeAnyURL() -> URL {
+        return URL(string: "https://any-url.com")!
+    }
+    
+    private func makeSUT(url: URL = URL(string: "http://any-url.com")!, file: StaticString = #file, line: UInt = #line) -> (sut: RemotePeopleFeed, client: HTTPClientSpy) {
         let client = HTTPClientSpy()
-        let sut = RemotePeopleFeed(client: client)
+        let sut = RemotePeopleFeed(url: url, client: client)
         trackMemoryLeaks(client, file: file, line: line)
         trackMemoryLeaks(sut, file: file, line: line)
         return (sut, client)
@@ -45,7 +64,7 @@ class RemotePeopleFeedTests: XCTestCase {
         var requestedURL: URL?
         
         func get(from url: URL) {
-            
+            requestedURL = url
         }
     }
 }
