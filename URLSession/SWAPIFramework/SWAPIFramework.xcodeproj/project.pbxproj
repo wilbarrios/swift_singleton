@@ -8,12 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		AC5C6B9125FAFD2E000FD324 /* SWAPIFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = AC5C6B8F25FAFD2E000FD324 /* SWAPIFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC5C6B9F25FAFDA3000FD324 /* SWAPIFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C6B9E25FAFDA3000FD324 /* SWAPIFrameworkTests.swift */; };
+		AC5C6BA125FAFDA3000FD324 /* SWAPIFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5C6B8C25FAFD2E000FD324 /* SWAPIFramework.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC5C6BA225FAFDA3000FD324 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC5C6B8325FAFD2E000FD324 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC5C6B8B25FAFD2E000FD324;
+			remoteInfo = SWAPIFramework;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AC5C6B8C25FAFD2E000FD324 /* SWAPIFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWAPIFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5C6B8F25FAFD2E000FD324 /* SWAPIFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWAPIFramework.h; sourceTree = "<group>"; };
 		AC5C6B9025FAFD2E000FD324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC5C6B9C25FAFDA3000FD324 /* SWAPIFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWAPIFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC5C6B9E25FAFDA3000FD324 /* SWAPIFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAPIFrameworkTests.swift; sourceTree = "<group>"; };
+		AC5C6BA025FAFDA3000FD324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +39,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AC5C6B9925FAFDA3000FD324 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC5C6BA125FAFDA3000FD324 /* SWAPIFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -31,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				AC5C6B8E25FAFD2E000FD324 /* SWAPIFramework */,
+				AC5C6B9D25FAFDA3000FD324 /* SWAPIFrameworkTests */,
 				AC5C6B8D25FAFD2E000FD324 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				AC5C6B8C25FAFD2E000FD324 /* SWAPIFramework.framework */,
+				AC5C6B9C25FAFDA3000FD324 /* SWAPIFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -50,6 +75,15 @@
 				AC5C6B9025FAFD2E000FD324 /* Info.plist */,
 			);
 			path = SWAPIFramework;
+			sourceTree = "<group>";
+		};
+		AC5C6B9D25FAFDA3000FD324 /* SWAPIFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC5C6B9E25FAFDA3000FD324 /* SWAPIFrameworkTests.swift */,
+				AC5C6BA025FAFDA3000FD324 /* Info.plist */,
+			);
+			path = SWAPIFrameworkTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,15 +118,37 @@
 			productReference = AC5C6B8C25FAFD2E000FD324 /* SWAPIFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		AC5C6B9B25FAFDA3000FD324 /* SWAPIFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC5C6BA425FAFDA3000FD324 /* Build configuration list for PBXNativeTarget "SWAPIFrameworkTests" */;
+			buildPhases = (
+				AC5C6B9825FAFDA3000FD324 /* Sources */,
+				AC5C6B9925FAFDA3000FD324 /* Frameworks */,
+				AC5C6B9A25FAFDA3000FD324 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC5C6BA325FAFDA3000FD324 /* PBXTargetDependency */,
+			);
+			name = SWAPIFrameworkTests;
+			productName = SWAPIFrameworkTests;
+			productReference = AC5C6B9C25FAFDA3000FD324 /* SWAPIFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		AC5C6B8325FAFD2E000FD324 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					AC5C6B8B25FAFD2E000FD324 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					AC5C6B9B25FAFDA3000FD324 = {
 						CreatedOnToolsVersion = 12.2;
 					};
 				};
@@ -111,12 +167,20 @@
 			projectRoot = "";
 			targets = (
 				AC5C6B8B25FAFD2E000FD324 /* SWAPIFramework */,
+				AC5C6B9B25FAFDA3000FD324 /* SWAPIFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AC5C6B8A25FAFD2E000FD324 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC5C6B9A25FAFDA3000FD324 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,7 +197,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AC5C6B9825FAFDA3000FD324 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC5C6B9F25FAFDA3000FD324 /* SWAPIFrameworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC5C6BA325FAFDA3000FD324 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC5C6B8B25FAFD2E000FD324 /* SWAPIFramework */;
+			targetProxy = AC5C6BA225FAFDA3000FD324 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AC5C6B9225FAFD2E000FD324 /* Debug */ = {
@@ -303,6 +383,40 @@
 			};
 			name = Release;
 		};
+		AC5C6BA525FAFDA3000FD324 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SWAPIFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wb.devs.SWAPIFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AC5C6BA625FAFDA3000FD324 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SWAPIFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wb.devs.SWAPIFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -320,6 +434,15 @@
 			buildConfigurations = (
 				AC5C6B9525FAFD2E000FD324 /* Debug */,
 				AC5C6B9625FAFD2E000FD324 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC5C6BA425FAFDA3000FD324 /* Build configuration list for PBXNativeTarget "SWAPIFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC5C6BA525FAFDA3000FD324 /* Debug */,
+				AC5C6BA625FAFDA3000FD324 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
