@@ -10,6 +10,7 @@ import Foundation
 class RemotePeopleFeed {
     enum Error: Swift.Error, Equatable {
         case connectivity
+        case invalidData
     }
     
     // MARK: Properties
@@ -26,9 +27,10 @@ class RemotePeopleFeed {
         self.client.get(from: url) {
             result in
             switch result {
+            case .success(_):
+                completion(.invalidData)
             case .failure(_):
                 completion(.connectivity)
-            default: break
             }
         }
     }
