@@ -40,7 +40,7 @@ import Foundation
 //    "url": "https://swapi.dev/api/people/1/"
 //}
 
-struct PersonItem: Equatable, Decodable {
+struct PersonItem: Equatable {
     var name: String
     var height: String
     var gender: String

@@ -30,8 +30,8 @@ class RemotePeopleFeed {
             result in
             switch result {
             case .success((let data, let response)):
-                if response.statusCode == 200, let root = try? JSONDecoder().decode(Root.self, from: data) {
-                    completion(.success(root.results))
+                if response.statusCode == 200, let people = try? RemotePeopleFeed.map(data) {
+                    completion(.success(people))
                 } else {
                     completion(.failure(.invalidData))
                 }
@@ -42,11 +42,22 @@ class RemotePeopleFeed {
     }
     
     private static func map(_ data: Data) throws -> [PersonItem] {
-        let persons = try JSONDecoder().decode([PersonItem].self, from: data)
-        return persons
+        let persons = try JSONDecoder().decode(Root.self, from: data)
+        return persons.results.map({ $0.item })
     }
 }
 
 private struct Root: Decodable {
-    let results: [PersonItem]
+    let results: [RemotePersonItem]
+}
+
+/// To avoid tight coupling to API implementation details
+private struct RemotePersonItem: Equatable, Decodable {
+    var name: String
+    var height: String
+    var gender: String
+    
+    var item: PersonItem {
+        PersonItem(name: name, height: height, gender: gender)
+    }
 }
