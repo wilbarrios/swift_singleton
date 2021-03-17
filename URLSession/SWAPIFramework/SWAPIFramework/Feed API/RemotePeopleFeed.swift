@@ -30,8 +30,8 @@ class RemotePeopleFeed {
             result in
             switch result {
             case .success((let data, _)):
-                if let _ = try? JSONSerialization.jsonObject(with: data) {
-                    completion(.success([]))
+                if let root = try? JSONDecoder().decode(Root.self, from: data) {
+                    completion(.success(root.results))
                 } else {
                     completion(.failure(.invalidData))
                 }
@@ -45,4 +45,8 @@ class RemotePeopleFeed {
         let persons = try JSONDecoder().decode([PersonItem].self, from: data)
         return persons
     }
+}
+
+private struct Root: Decodable {
+    let results: [PersonItem]
 }

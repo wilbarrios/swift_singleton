@@ -75,7 +75,41 @@ class RemotePeopleFeedTests: XCTestCase {
         }
     }
     
+    func test_load_deliversItemsOn200HTTPResponseWithJSONItems() {
+        let (sut, client) = makeSUT()
+        
+        let item1 = makeItem(
+            name: "nameOne",
+            height: "heightOne",
+            gender: "genderOne")
+        
+        let item2 = makeItem(
+            name: "nameTwo",
+            height: "heightTwo",
+            gender: "genderTwo")
+                
+        expect(sut, toCompleteWithResult: .success([item1.item, item2.item])) {
+            let resultJSON = makeResultJSON([item1.json, item2.json])
+            client.complete(withStatusCode: 200, data: resultJSON)
+        }
+    }
+    
     // MARK: Helpers
+    
+    private func makeResultJSON(_ persons: [[String: Any]]) -> Data {
+        let json = ["results": persons]
+        return try! JSONSerialization.data(withJSONObject: json)
+    }
+    
+    private func makeItem(name: String, height: String, gender: String) -> (item: PersonItem, json: [String: Any]) {
+        let item = PersonItem(name: name, height: height, gender: gender)
+        let json = [
+            "name": item.name,
+            "height": item.height,
+            "gender": item.gender
+        ]
+        return (item, json)
+    }
     
     private func expect(_ sut: RemotePeopleFeed, toCompleteWithResult result: RemotePeopleFeed.Result, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
         var capturedResults = [RemotePeopleFeed.Result]()
