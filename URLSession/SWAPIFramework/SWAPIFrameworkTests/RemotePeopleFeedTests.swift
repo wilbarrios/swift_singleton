@@ -40,7 +40,7 @@ class RemotePeopleFeedTests: XCTestCase {
         
         let clientError = makeAnyError()
         
-        expect(sut, toCompleteWithError: .connectivity, when: {
+        expect(sut, toCompleteWithResult: .failure(.connectivity), when: {
             client.complete(withError: clientError)
         })
     }
@@ -51,7 +51,7 @@ class RemotePeopleFeedTests: XCTestCase {
         let samples = [199, 201, 300, 400, 500]
         
         samples.enumerated().forEach { index, code in
-            expect(sut, toCompleteWithError: .invalidData) {
+            expect(sut, toCompleteWithResult: .failure(.invalidData)) {
                 client.complete(withStatusCode: code, at: index)
             }
         }
@@ -60,7 +60,7 @@ class RemotePeopleFeedTests: XCTestCase {
     func test_load_deliversErrorOn200HTTPResponseWithInvalidJSON() {
         let (sut, client) = makeSUT()
         
-        expect(sut, toCompleteWithError: .invalidData) {
+        expect(sut, toCompleteWithResult: .failure(.invalidData)) {
             let invalidJSON = "invalid JSON".data(using: .utf8)!
             client.complete(withStatusCode: 200, data: invalidJSON)
         }
@@ -68,13 +68,13 @@ class RemotePeopleFeedTests: XCTestCase {
     
     // MARK: Helpers
     
-    private func expect(_ sut: RemotePeopleFeed, toCompleteWithError error: RemotePeopleFeed.Error, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
-        var capturedErrors = [RemotePeopleFeed.Error]()
-        sut.load(completion: { capturedErrors.append($0) })
+    private func expect(_ sut: RemotePeopleFeed, toCompleteWithResult result: RemotePeopleFeed.Result, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
+        var capturedResults = [RemotePeopleFeed.Result]()
+        sut.load(completion: { capturedResults.append($0) })
         
         action()
         
-        XCTAssertEqual(capturedErrors, [error], file: file, line: line)
+        XCTAssertEqual(capturedResults, [result], file: file, line: line)
     }
     
     private func makeAnyError() -> NSError {

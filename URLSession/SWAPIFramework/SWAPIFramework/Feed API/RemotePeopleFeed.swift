@@ -13,6 +13,8 @@ class RemotePeopleFeed {
         case invalidData
     }
     
+    typealias Result = Swift.Result<[PersonItem], Error>
+    
     // MARK: Properties
     let client: HTTPClient
     let url: URL
@@ -22,15 +24,15 @@ class RemotePeopleFeed {
         self.client = client
         self.url = url
     }
-    
-    func load(completion: @escaping (Error) -> Void) {
+        
+    func load(completion: @escaping (Result) -> Void) {
         self.client.get(from: url) {
             result in
             switch result {
             case .success(_):
-                completion(.invalidData)
+                completion(.failure(.invalidData))
             case .failure(_):
-                completion(.connectivity)
+                completion(.failure(.connectivity))
             }
         }
     }
