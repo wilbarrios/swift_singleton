@@ -66,6 +66,15 @@ class RemotePeopleFeedTests: XCTestCase {
         }
     }
     
+    func test_load_deliversNoItemOn200HTTPResponseWithEmptyJSONList() {
+        let (sut, client) = makeSUT()
+        
+        expect(sut, toCompleteWithResult: .success([])) {
+            let emptyJSONList = "{\"results\": []}".data(using: .utf8)!
+            client.complete(withStatusCode: 200, data: emptyJSONList)
+        }
+    }
+    
     // MARK: Helpers
     
     private func expect(_ sut: RemotePeopleFeed, toCompleteWithResult result: RemotePeopleFeed.Result, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {

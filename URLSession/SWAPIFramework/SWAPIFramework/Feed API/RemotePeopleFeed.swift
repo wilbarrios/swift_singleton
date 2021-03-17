@@ -29,11 +29,20 @@ class RemotePeopleFeed {
         self.client.get(from: url) {
             result in
             switch result {
-            case .success(_):
-                completion(.failure(.invalidData))
+            case .success((let data, _)):
+                if let _ = try? JSONSerialization.jsonObject(with: data) {
+                    completion(.success([]))
+                } else {
+                    completion(.failure(.invalidData))
+                }
             case .failure(_):
                 completion(.failure(.connectivity))
             }
         }
+    }
+    
+    private static func map(_ data: Data) throws -> [PersonItem] {
+        let persons = try JSONDecoder().decode([PersonItem].self, from: data)
+        return persons
     }
 }
