@@ -39,15 +39,10 @@ class RemotePeopleFeedTests: XCTestCase {
         let (sut, client) = makeSUT()
         
         let clientError = makeAnyError()
-        var capturedErrors = [RemotePeopleFeed.Error]()
-        sut.load {
-            error in
-            capturedErrors.append(error)
-        }
         
-        client.complete(withError: clientError)
-        
-        XCTAssertEqual(capturedErrors, [.connectivity]) // We consider order and quantity
+        expect(sut, toCompleteWithError: .connectivity, when: {
+            client.complete(withError: clientError)
+        })
     }
     
     func test_load_deliversErrorOnNon200HTTPResponse() {
@@ -56,28 +51,31 @@ class RemotePeopleFeedTests: XCTestCase {
         let samples = [199, 201, 300, 400, 500]
         
         samples.enumerated().forEach { index, code in
-            var capturedErrors = [RemotePeopleFeed.Error]()
-            sut.load { capturedErrors.append($0) }
-            
-            client.complete(withStatusCode: code, at: index)
-            
-            XCTAssertEqual(capturedErrors, [.invalidData])
+            expect(sut, toCompleteWithError: .invalidData) {
+                client.complete(withStatusCode: code, at: index)
+            }
         }
     }
     
     func test_load_deliversErrorOn200HTTPResponseWithInvalidJSON() {
         let (sut, client) = makeSUT()
         
-        var capturedErrors = [RemotePeopleFeed.Error]()
-        sut.load(completion: { capturedErrors.append($0) })
-        
-        let invalidJSON = "invalid JSON".data(using: .utf8)!
-        client.complete(withStatusCode: 200, data: invalidJSON)
-        
-        XCTAssertEqual(capturedErrors, [.invalidData])
+        expect(sut, toCompleteWithError: .invalidData) {
+            let invalidJSON = "invalid JSON".data(using: .utf8)!
+            client.complete(withStatusCode: 200, data: invalidJSON)
+        }
     }
     
     // MARK: Helpers
+    
+    private func expect(_ sut: RemotePeopleFeed, toCompleteWithError error: RemotePeopleFeed.Error, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
+        var capturedErrors = [RemotePeopleFeed.Error]()
+        sut.load(completion: { capturedErrors.append($0) })
+        
+        action()
+        
+        XCTAssertEqual(capturedErrors, [error], file: file, line: line)
+    }
     
     private func makeAnyError() -> NSError {
         return NSError(domain: "anyDomain", code: 1, userInfo: nil)
