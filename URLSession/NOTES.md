@@ -21,3 +21,16 @@ The *audience* then ‘decodes’, or interprets, the message for themselves. De
 
 We can say... when we `POST` data, we need to **encode** it, when we receive or `GET` data, we **decode** that data.
 
+## JSONSerialization
+
+An object that converts between JSON and the equivalent Foundation objects.
+
+You use the JSONSerialization class to convert JSON to Foundation objects and convert Foundation objects to JSON.
+
+## JSONEncoder
+
+An object that encodes instances of a data type as JSON objects.
+
+## JSONDecoder
+
+An object that decodes instances of a data type from JSON objects.
