@@ -60,3 +60,5 @@ When a work item is executred synchronously with the async method, the method ca
 ```swift
 DispatchQueue.global().async {}
 ```
+
+DispatchQueue.global is concurrent
