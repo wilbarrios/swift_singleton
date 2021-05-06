@@ -29,19 +29,33 @@ final class FeedController: UITableViewController {
 
 class FeedControllerTests: XCTestCase {
     func test_init_doesNotFetchFeed() {
-        let loader = FeedLoaderMock()
-        let _ = FeedController(loader: loader)
+        let (_, loader) = makeSUT()
         
         XCTAssertEqual(loader.loadRequestsCount, 0)
     }
     
     func test_viewDidLoad_fetchesFeedAutomatically() {
-        let loader = FeedLoaderMock()
-        let sut = FeedController(loader: loader)
+        let (sut, loader) = makeSUT()
         
         sut.loadViewIfNeeded()
         
         XCTAssertEqual(loader.loadRequestsCount, 1)
+    }
+    
+    // MARK: Helpers
+    private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: FeedController, loader: FeedLoaderMock) {
+        let loader = FeedLoaderMock()
+        let sut = FeedController(loader: loader)
+        trackMemoryLeaks(loader, file: file, line: line)
+        trackMemoryLeaks(sut, file: file, line: line)
+        return (sut, loader)
+    }
+    
+    private func trackMemoryLeaks(_ object: AnyObject, file: StaticString = #file, line: UInt = #line) {
+        addTeardownBlock {
+            [weak object] in
+            XCTAssertNil(object, "Instance should be deallocated, potential memory leak", file: file, line: line)
+        }
     }
     
     private class FeedLoaderMock: FeedLoader {
