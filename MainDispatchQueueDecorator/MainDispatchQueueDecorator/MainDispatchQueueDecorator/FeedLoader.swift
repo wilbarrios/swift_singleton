@@ -7,7 +7,13 @@
 
 import Foundation
 
-public struct FeedItem { }
+public struct FeedItem: Equatable {
+    public let name: String
+    
+    public init(name: String) {
+        self.name = name
+    }
+}
 
 public protocol FeedLoader {
     typealias Result = Swift.Result<[FeedItem], Error>

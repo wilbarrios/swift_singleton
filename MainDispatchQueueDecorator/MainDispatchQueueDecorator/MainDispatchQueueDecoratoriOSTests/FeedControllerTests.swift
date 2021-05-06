@@ -11,6 +11,11 @@ import MainDispatchQueueDecorator
 
 final class FeedController: UITableViewController {
     private var loader: FeedLoader?
+    private var data = [FeedItem]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     convenience init(loader: FeedLoader) {
         self.init()
@@ -23,7 +28,24 @@ final class FeedController: UITableViewController {
     }
     
     private func load() {
-        loader?.load(completion: {_ in })
+        loader?.load(completion: {
+            [weak self] result in
+            if let _data = try? result.get() {
+                self?.data = _data
+            }
+        })
+    }
+    
+    // MARK: Table extension
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        data.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let row = indexPath.row
+        cell.textLabel?.text = data[row].name
+        return cell
     }
 }
 
@@ -42,7 +64,23 @@ class FeedControllerTests: XCTestCase {
         XCTAssertEqual(loader.loadRequestsCount, 1)
     }
     
+    func test_loadCompletesSucceed_rendersItems() {
+        let (sut, loader) = makeSUT()
+        let item1 = makeItem(name: "itemOne")
+        let item2 = makeItem(name: "itemTwo")
+        let data = [item1, item2]
+        
+        sut.loadViewIfNeeded()
+        loader.complete(result: .success(data))
+        
+        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), data.count)
+    }
+     
     // MARK: Helpers
+    private func makeItem(name: String = "itemName") -> FeedItem {
+        FeedItem(name: name)
+    }
+    
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: FeedController, loader: FeedLoaderMock) {
         let loader = FeedLoaderMock()
         let sut = FeedController(loader: loader)
@@ -59,10 +97,20 @@ class FeedControllerTests: XCTestCase {
     }
     
     private class FeedLoaderMock: FeedLoader {
-        var loadRequestsCount: Int = 0
+        var loadRequestsCount: Int {
+            completions.count
+        }
         
+        private var completions = [((FeedLoader.Result) -> Void)]()
+        
+        // Helpers
+        func complete(result: FeedLoader.Result, index: Int = 0) {
+            completions[index](result)
+        }
+        
+        // Extension
         func load(completion: @escaping (FeedLoader.Result) -> Void) {
-            loadRequestsCount += 1
+            completions.append(completion)
         }
     }
 }
