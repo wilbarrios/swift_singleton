@@ -16,6 +16,15 @@ final class FeedController: UITableViewController {
         self.init()
         self.loader = loader
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        load()
+    }
+    
+    private func load() {
+        loader?.load(completion: {_ in })
+    }
 }
 
 class FeedControllerTests: XCTestCase {
@@ -24,6 +33,15 @@ class FeedControllerTests: XCTestCase {
         let _ = FeedController(loader: loader)
         
         XCTAssertEqual(loader.loadRequestsCount, 0)
+    }
+    
+    func test_viewDidLoad_fetchesFeedAutomatically() {
+        let loader = FeedLoaderMock()
+        let sut = FeedController(loader: loader)
+        
+        sut.loadViewIfNeeded()
+        
+        XCTAssertEqual(loader.loadRequestsCount, 1)
     }
     
     private class FeedLoaderMock: FeedLoader {
