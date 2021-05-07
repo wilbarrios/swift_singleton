@@ -71,35 +71,33 @@ class FeedControllerTests: XCTestCase {
         XCTAssertEqual(loader.loadRequestsCount, 1)
     }
     
-    func test_loadCompletesSucceed_rendersItems() {
+    func test_loadSucceed_rendersItems() {
         let (sut, loader) = makeSUT()
-        let item1 = makeItem(name: "itemOne")
-        let item2 = makeItem(name: "itemTwo")
-        let data = [item1, item2]
         
-        sut.loadViewIfNeeded()
-        loader.complete(result: .success(data))
+        let data = [makeItem(name: "ItemOne"), makeItem(name: "ItemTwo")]
         
-        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), data.count)
+        assert(sut, renders: data) {
+            loader.complete(result: .success(data))
+        }
     }
+     
+    // MARK: Helpers
+    private static var TABLE_SECTION: Int { 0 }
     
-    func test_cell_rendersItemCell() {
-        let (sut, loader) = makeSUT()
-        let item1 = makeItem(name: "itemOne")
-        let item2 = makeItem(name: "itemTwo")
-        let data = [item1, item2]
-        
+    private func assert(_ sut: FeedController, renders items: [FeedItem], action: @escaping (() -> Void), file: StaticString = #file, line: UInt = #line) {
         sut.loadViewIfNeeded()
-        loader.complete(result: .success(data))
         
         let dataSource: UITableViewDataSource = sut.tableView.dataSource!
         let tableView: UITableView = sut.tableView!
         
-        XCTAssertEqual(dataSource.tableView(tableView, cellForRowAt: IndexPath(row: 0, section: 0)).textLabel?.text, item1.name)
-        XCTAssertEqual(dataSource.tableView(tableView, cellForRowAt: IndexPath(row: 1, section: 0)).textLabel?.text, item2.name)
+        action()
+        
+        for (i, item) in items.enumerated() {
+            let cell = dataSource.tableView(tableView, cellForRowAt: IndexPath(row: i, section: FeedControllerTests.TABLE_SECTION))
+            XCTAssertEqual(cell.textLabel?.text, item.name, file: file, line: line)
+        }
     }
-     
-    // MARK: Helpers
+    
     private func makeItem(name: String = "itemName") -> FeedItem {
         FeedItem(name: name)
     }
