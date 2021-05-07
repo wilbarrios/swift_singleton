@@ -24,7 +24,12 @@ final class FeedController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
         load()
+    }
+    
+    private func setupTableView() {
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: FeedController.cellIdentifier)
     }
     
     private func load() {
@@ -41,8 +46,10 @@ final class FeedController: UITableViewController {
         data.count
     }
     
+    private static var cellIdentifier: String { "cell" }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: FeedController.cellIdentifier, for: indexPath)
         let row = indexPath.row
         cell.textLabel?.text = data[row].name
         return cell
@@ -74,6 +81,22 @@ class FeedControllerTests: XCTestCase {
         loader.complete(result: .success(data))
         
         XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), data.count)
+    }
+    
+    func test_cell_rendersItemCell() {
+        let (sut, loader) = makeSUT()
+        let item1 = makeItem(name: "itemOne")
+        let item2 = makeItem(name: "itemTwo")
+        let data = [item1, item2]
+        
+        sut.loadViewIfNeeded()
+        loader.complete(result: .success(data))
+        
+        let dataSource: UITableViewDataSource = sut.tableView.dataSource!
+        let tableView: UITableView = sut.tableView!
+        
+        XCTAssertEqual(dataSource.tableView(tableView, cellForRowAt: IndexPath(row: 0, section: 0)).textLabel?.text, item1.name)
+        XCTAssertEqual(dataSource.tableView(tableView, cellForRowAt: IndexPath(row: 1, section: 0)).textLabel?.text, item2.name)
     }
      
     // MARK: Helpers
