@@ -13,6 +13,9 @@
 		BFB24B212643790600A50ED0 /* MainDispatchQueueDecorator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF236C4026422869003BED67 /* MainDispatchQueueDecorator.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BFB24B342643795B00A50ED0 /* MainDispatchQueueDecoratoriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB24B14264378FD00A50ED0 /* MainDispatchQueueDecoratoriOS.framework */; };
 		BFB24B412643797600A50ED0 /* FeedControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB24B402643797600A50ED0 /* FeedControllerTests.swift */; };
+		BFE36EBC2644C66C00D21862 /* FeedUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE36EBB2644C66C00D21862 /* FeedUIIntegrationTests.swift */; };
+		BFE36EC22644C80D00D21862 /* FeedLoaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE36EC12644C80D00D21862 /* FeedLoaderMock.swift */; };
+		BFE36ECA2644C86D00D21862 /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE36EC92644C86D00D21862 /* XCTestCase+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		BFB24B2F2643795B00A50ED0 /* MainDispatchQueueDecoratoriOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainDispatchQueueDecoratoriOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB24B332643795B00A50ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB24B402643797600A50ED0 /* FeedControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedControllerTests.swift; sourceTree = "<group>"; };
+		BFE36EBB2644C66C00D21862 /* FeedUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIIntegrationTests.swift; sourceTree = "<group>"; };
+		BFE36EC12644C80D00D21862 /* FeedLoaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderMock.swift; sourceTree = "<group>"; };
+		BFE36EC92644C86D00D21862 /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,10 +165,21 @@
 		BFB24B302643795B00A50ED0 /* MainDispatchQueueDecoratoriOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				BFE36EC02644C7F700D21862 /* Helpers */,
 				BFB24B332643795B00A50ED0 /* Info.plist */,
 				BFB24B402643797600A50ED0 /* FeedControllerTests.swift */,
+				BFE36EBB2644C66C00D21862 /* FeedUIIntegrationTests.swift */,
 			);
 			path = MainDispatchQueueDecoratoriOSTests;
+			sourceTree = "<group>";
+		};
+		BFE36EC02644C7F700D21862 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BFE36EC12644C80D00D21862 /* FeedLoaderMock.swift */,
+				BFE36EC92644C86D00D21862 /* XCTestCase+Extension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,7 +381,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE36ECA2644C86D00D21862 /* XCTestCase+Extension.swift in Sources */,
+				BFE36EBC2644C66C00D21862 /* FeedUIIntegrationTests.swift in Sources */,
 				BFB24B412643797600A50ED0 /* FeedControllerTests.swift in Sources */,
+				BFE36EC22644C80D00D21862 /* FeedLoaderMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

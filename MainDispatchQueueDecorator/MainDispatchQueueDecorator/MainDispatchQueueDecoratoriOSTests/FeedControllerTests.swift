@@ -109,29 +109,4 @@ class FeedControllerTests: XCTestCase {
         trackMemoryLeaks(sut, file: file, line: line)
         return (sut, loader)
     }
-    
-    private func trackMemoryLeaks(_ object: AnyObject, file: StaticString = #file, line: UInt = #line) {
-        addTeardownBlock {
-            [weak object] in
-            XCTAssertNil(object, "Instance should be deallocated, potential memory leak", file: file, line: line)
-        }
-    }
-    
-    private class FeedLoaderMock: FeedLoader {
-        var loadRequestsCount: Int {
-            completions.count
-        }
-        
-        private var completions = [((FeedLoader.Result) -> Void)]()
-        
-        // Helpers
-        func complete(result: FeedLoader.Result, index: Int = 0) {
-            completions[index](result)
-        }
-        
-        // Extension
-        func load(completion: @escaping (FeedLoader.Result) -> Void) {
-            completions.append(completion)
-        }
-    }
 }
