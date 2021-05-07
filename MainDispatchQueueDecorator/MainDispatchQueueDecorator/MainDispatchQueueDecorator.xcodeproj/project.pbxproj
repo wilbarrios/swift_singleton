@@ -16,6 +16,11 @@
 		BFE36EBC2644C66C00D21862 /* FeedUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE36EBB2644C66C00D21862 /* FeedUIIntegrationTests.swift */; };
 		BFE36EC22644C80D00D21862 /* FeedLoaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE36EC12644C80D00D21862 /* FeedLoaderMock.swift */; };
 		BFE36ECA2644C86D00D21862 /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE36EC92644C86D00D21862 /* XCTestCase+Extension.swift */; };
+		BFE36ED02644CEE900D21862 /* FeedUIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE36ECF2644CEE900D21862 /* FeedUIFactory.swift */; };
+		BFE36ED52644CF0800D21862 /* UIKitFeedUIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE36ED42644CF0800D21862 /* UIKitFeedUIFactory.swift */; };
+		BFE36EDB2644CF3800D21862 /* WeakRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE36EDA2644CF3800D21862 /* WeakRef.swift */; };
+		BFE36EE32644CF4800D21862 /* WeakRef+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE36EE22644CF4800D21862 /* WeakRef+Extensions.swift */; };
+		BFE36EE82644D01800D21862 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE36EE72644D01800D21862 /* FeedController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,11 @@
 		BFE36EBB2644C66C00D21862 /* FeedUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIIntegrationTests.swift; sourceTree = "<group>"; };
 		BFE36EC12644C80D00D21862 /* FeedLoaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderMock.swift; sourceTree = "<group>"; };
 		BFE36EC92644C86D00D21862 /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
+		BFE36ECF2644CEE900D21862 /* FeedUIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIFactory.swift; sourceTree = "<group>"; };
+		BFE36ED42644CF0800D21862 /* UIKitFeedUIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitFeedUIFactory.swift; sourceTree = "<group>"; };
+		BFE36EDA2644CF3800D21862 /* WeakRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRef.swift; sourceTree = "<group>"; };
+		BFE36EE22644CF4800D21862 /* WeakRef+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeakRef+Extensions.swift"; sourceTree = "<group>"; };
+		BFE36EE72644D01800D21862 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +160,8 @@
 		BFB24B15264378FD00A50ED0 /* MainDispatchQueueDecoratoriOS */ = {
 			isa = PBXGroup;
 			children = (
+				BFE36ED92644CF2100D21862 /* Base */,
+				BFE36ECE2644CED700D21862 /* Feed */,
 				BFB24B17264378FD00A50ED0 /* Info.plist */,
 			);
 			path = MainDispatchQueueDecoratoriOS;
@@ -180,6 +192,25 @@
 				BFE36EC92644C86D00D21862 /* XCTestCase+Extension.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BFE36ECE2644CED700D21862 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				BFE36ECF2644CEE900D21862 /* FeedUIFactory.swift */,
+				BFE36ED42644CF0800D21862 /* UIKitFeedUIFactory.swift */,
+				BFE36EE72644D01800D21862 /* FeedController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		BFE36ED92644CF2100D21862 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BFE36EDA2644CF3800D21862 /* WeakRef.swift */,
+				BFE36EE22644CF4800D21862 /* WeakRef+Extensions.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,6 +405,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE36ED02644CEE900D21862 /* FeedUIFactory.swift in Sources */,
+				BFE36ED52644CF0800D21862 /* UIKitFeedUIFactory.swift in Sources */,
+				BFE36EE82644D01800D21862 /* FeedController.swift in Sources */,
+				BFE36EDB2644CF3800D21862 /* WeakRef.swift in Sources */,
+				BFE36EE32644CF4800D21862 /* WeakRef+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +711,7 @@
 		BFB24B382643795B00A50ED0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MainDispatchQueueDecoratoriOSTests/Info.plist;
@@ -696,6 +733,7 @@
 		BFB24B392643795B00A50ED0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MainDispatchQueueDecoratoriOSTests/Info.plist;
