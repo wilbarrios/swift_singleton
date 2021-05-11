@@ -44,6 +44,17 @@
             testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BF1E8D48264A0D57002E2415"
+               BuildableName = "SnapshotTestCITests.xctest"
+               BlueprintName = "SnapshotTestCITests"
+               ReferencedContainer = "container:SnapshotTest.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "BF691E96264A0ACD00114BD2"
                BuildableName = "SnapshotTestTests.xctest"
                BlueprintName = "SnapshotTestTests"

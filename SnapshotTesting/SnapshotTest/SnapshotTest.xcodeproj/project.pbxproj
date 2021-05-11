@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF1E8D4C264A0D57002E2415 /* SnapshotTestCITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E8D4B264A0D57002E2415 /* SnapshotTestCITests.swift */; };
+		BF1E8D4E264A0D57002E2415 /* SnapshotTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF384281264A051400CA1170 /* SnapshotTest.framework */; };
 		BF38428F264A055800CA1170 /* ProgrammaticController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38428E264A055800CA1170 /* ProgrammaticController.swift */; };
 		BF384293264A075500CA1170 /* UIView+Exentensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF384292264A075500CA1170 /* UIView+Exentensions.swift */; };
 		BF691E9C264A0ACD00114BD2 /* SnapshotTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF384281264A051400CA1170 /* SnapshotTest.framework */; };
@@ -14,6 +16,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BF1E8D4F264A0D57002E2415 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF384278264A051400CA1170 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF384280264A051400CA1170;
+			remoteInfo = SnapshotTest;
+		};
 		BF691E9D264A0ACD00114BD2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF384278264A051400CA1170 /* Project object */;
@@ -24,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF1E8D49264A0D57002E2415 /* SnapshotTestCITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapshotTestCITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF1E8D4B264A0D57002E2415 /* SnapshotTestCITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestCITests.swift; sourceTree = "<group>"; };
+		BF1E8D4D264A0D57002E2415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF384281264A051400CA1170 /* SnapshotTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapshotTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF384285264A051400CA1170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF38428E264A055800CA1170 /* ProgrammaticController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticController.swift; sourceTree = "<group>"; };
@@ -34,6 +46,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BF1E8D46264A0D57002E2415 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF1E8D4E264A0D57002E2415 /* SnapshotTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF38427E264A051400CA1170 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,11 +72,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF1E8D4A264A0D57002E2415 /* SnapshotTestCITests */ = {
+			isa = PBXGroup;
+			children = (
+				BF1E8D4B264A0D57002E2415 /* SnapshotTestCITests.swift */,
+				BF1E8D4D264A0D57002E2415 /* Info.plist */,
+			);
+			path = SnapshotTestCITests;
+			sourceTree = "<group>";
+		};
 		BF384277264A051400CA1170 = {
 			isa = PBXGroup;
 			children = (
 				BF384283264A051400CA1170 /* SnapshotTest */,
 				BF691E98264A0ACD00114BD2 /* SnapshotTestTests */,
+				BF1E8D4A264A0D57002E2415 /* SnapshotTestCITests */,
 				BF384282264A051400CA1170 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +96,7 @@
 			children = (
 				BF384281264A051400CA1170 /* SnapshotTest.framework */,
 				BF691E97264A0ACD00114BD2 /* SnapshotTestTests.xctest */,
+				BF1E8D49264A0D57002E2415 /* SnapshotTestCITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +149,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		BF1E8D48264A0D57002E2415 /* SnapshotTestCITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF1E8D53264A0D57002E2415 /* Build configuration list for PBXNativeTarget "SnapshotTestCITests" */;
+			buildPhases = (
+				BF1E8D45264A0D57002E2415 /* Sources */,
+				BF1E8D46264A0D57002E2415 /* Frameworks */,
+				BF1E8D47264A0D57002E2415 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF1E8D50264A0D57002E2415 /* PBXTargetDependency */,
+			);
+			name = SnapshotTestCITests;
+			productName = SnapshotTestCITests;
+			productReference = BF1E8D49264A0D57002E2415 /* SnapshotTestCITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BF384280264A051400CA1170 /* SnapshotTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF384289264A051500CA1170 /* Build configuration list for PBXNativeTarget "SnapshotTest" */;
@@ -163,6 +212,9 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					BF1E8D48264A0D57002E2415 = {
+						CreatedOnToolsVersion = 12.4;
+					};
 					BF384280264A051400CA1170 = {
 						CreatedOnToolsVersion = 12.4;
 						LastSwiftMigration = 1240;
@@ -188,11 +240,19 @@
 			targets = (
 				BF384280264A051400CA1170 /* SnapshotTest */,
 				BF691E96264A0ACD00114BD2 /* SnapshotTestTests */,
+				BF1E8D48264A0D57002E2415 /* SnapshotTestCITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BF1E8D47264A0D57002E2415 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF38427F264A051400CA1170 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,6 +270,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BF1E8D45264A0D57002E2415 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF1E8D4C264A0D57002E2415 /* SnapshotTestCITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF38427D264A051400CA1170 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,6 +298,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BF1E8D50264A0D57002E2415 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF384280264A051400CA1170 /* SnapshotTest */;
+			targetProxy = BF1E8D4F264A0D57002E2415 /* PBXContainerItemProxy */;
+		};
 		BF691E9E264A0ACD00114BD2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BF384280264A051400CA1170 /* SnapshotTest */;
@@ -238,6 +311,40 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		BF1E8D51264A0D57002E2415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapshotTestCITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wb.devs.SnapshotTestCITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF1E8D52264A0D57002E2415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapshotTestCITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wb.devs.SnapshotTestCITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		BF384287264A051500CA1170 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -449,6 +556,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BF1E8D53264A0D57002E2415 /* Build configuration list for PBXNativeTarget "SnapshotTestCITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF1E8D51264A0D57002E2415 /* Debug */,
+				BF1E8D52264A0D57002E2415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BF38427B264A051400CA1170 /* Build configuration list for PBXProject "SnapshotTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
