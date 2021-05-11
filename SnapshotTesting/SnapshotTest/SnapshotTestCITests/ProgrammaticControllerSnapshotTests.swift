@@ -17,6 +17,12 @@ class ProgrammaticControllerSnapshotTests: XCTestCase {
         record(snapshot: sut.snapshot(), name: "EMPTY_CONTROLLER")
     }
     
+    func test_shortText() {
+        let sut = makeSUT(text: "Short text")
+        
+        record(snapshot: sut.snapshot(), name: "SHORT_TEXT_CONTROLLER")
+    }
+    
     // MARK: Helpers
     private func makeSUT(text: String? = nil) -> ProgrammaticController {
         return ProgrammaticController(text: text ?? "")
