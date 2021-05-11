@@ -16,7 +16,7 @@ fileprivate struct CC {
 internal final class ProgrammaticController: UIViewController {
     
     // MARK: UI Components
-    private lazy var label: UILabel = {
+    lazy var label: UILabel = {
         let l = UILabel()
         l.font = UIFont.boldSystemFont(ofSize: CC.FONT_SIZE)
         l.text = text
