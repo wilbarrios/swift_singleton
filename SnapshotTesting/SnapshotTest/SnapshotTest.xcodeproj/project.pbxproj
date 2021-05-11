@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF1E8D4C264A0D57002E2415 /* SnapshotTestCITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E8D4B264A0D57002E2415 /* SnapshotTestCITests.swift */; };
 		BF1E8D4E264A0D57002E2415 /* SnapshotTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF384281264A051400CA1170 /* SnapshotTest.framework */; };
+		BF1E8D5B264A0E0F002E2415 /* ProgrammaticControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E8D5A264A0E0F002E2415 /* ProgrammaticControllerSnapshotTests.swift */; };
 		BF38428F264A055800CA1170 /* ProgrammaticController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38428E264A055800CA1170 /* ProgrammaticController.swift */; };
 		BF384293264A075500CA1170 /* UIView+Exentensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF384292264A075500CA1170 /* UIView+Exentensions.swift */; };
 		BF691E9C264A0ACD00114BD2 /* SnapshotTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF384281264A051400CA1170 /* SnapshotTest.framework */; };
@@ -34,8 +34,8 @@
 
 /* Begin PBXFileReference section */
 		BF1E8D49264A0D57002E2415 /* SnapshotTestCITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapshotTestCITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF1E8D4B264A0D57002E2415 /* SnapshotTestCITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestCITests.swift; sourceTree = "<group>"; };
 		BF1E8D4D264A0D57002E2415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF1E8D5A264A0E0F002E2415 /* ProgrammaticControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticControllerSnapshotTests.swift; sourceTree = "<group>"; };
 		BF384281264A051400CA1170 /* SnapshotTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapshotTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF384285264A051400CA1170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF38428E264A055800CA1170 /* ProgrammaticController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticController.swift; sourceTree = "<group>"; };
@@ -75,8 +75,8 @@
 		BF1E8D4A264A0D57002E2415 /* SnapshotTestCITests */ = {
 			isa = PBXGroup;
 			children = (
-				BF1E8D4B264A0D57002E2415 /* SnapshotTestCITests.swift */,
 				BF1E8D4D264A0D57002E2415 /* Info.plist */,
+				BF1E8D5A264A0E0F002E2415 /* ProgrammaticControllerSnapshotTests.swift */,
 			);
 			path = SnapshotTestCITests;
 			sourceTree = "<group>";
@@ -214,6 +214,7 @@
 				TargetAttributes = {
 					BF1E8D48264A0D57002E2415 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					BF384280264A051400CA1170 = {
 						CreatedOnToolsVersion = 12.4;
@@ -274,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF1E8D4C264A0D57002E2415 /* SnapshotTestCITests.swift in Sources */,
+				BF1E8D5B264A0E0F002E2415 /* ProgrammaticControllerSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +315,7 @@
 		BF1E8D51264A0D57002E2415 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SnapshotTestCITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,6 +325,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = wb.devs.SnapshotTestCITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -331,6 +334,7 @@
 		BF1E8D52264A0D57002E2415 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SnapshotTestCITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
