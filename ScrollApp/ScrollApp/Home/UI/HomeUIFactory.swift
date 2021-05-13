@@ -14,9 +14,7 @@ final class HomeUIFactory {
     }
     
     private static func makeOptions() -> [Option] {
-        [Option(id: "Option One", startHandler: {
-            print("Hola")
-        })]
+        []
     }
 }
 

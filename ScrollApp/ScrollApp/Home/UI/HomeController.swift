@@ -10,10 +10,13 @@ import UIKit
 
 struct Option {
     let id: String
-    let startHandler: () -> Void
+    let name: String
 }
 
 class HomeController: UITableViewController {
+    
+    // MARK: Events
+    var onOptionSelection: ((Option) -> Void)?
     
     // MARK: DataSource
     private var options = [Option]()
@@ -46,15 +49,14 @@ class HomeController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectCell(indexPath: indexPath)
+        onOptionSelection?(optionBy(indexPath))
     }
 }
 
 // MARK: Helpers
 extension HomeController {
-    func selectCell(indexPath ip: IndexPath) {
-        let option = options[ip.row]
-        option.startHandler()
+    func optionBy(_ indexPath: IndexPath) -> Option {
+        options[indexPath.row]
     }
     
     func makeCell(indexPath ip: IndexPath) -> UITableViewCell {

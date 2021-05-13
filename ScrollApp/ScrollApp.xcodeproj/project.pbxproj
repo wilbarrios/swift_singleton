@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BFEB78DC264CAF500094D9B3 /* ScrollViewOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEB78DB264CAF500094D9B3 /* ScrollViewOneController.swift */; };
+		BFEB78E1264CB0120094D9B3 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEB78E0264CB0120094D9B3 /* UIView+Extensions.swift */; };
 		BFEBA88A264C9CCF00D5201E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEBA889264C9CCF00D5201E /* AppDelegate.swift */; };
 		BFEBA893264C9CD200D5201E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFEBA892264C9CD200D5201E /* Assets.xcassets */; };
 		BFEBA896264C9CD200D5201E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFEBA894264C9CD200D5201E /* LaunchScreen.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BFEB78DB264CAF500094D9B3 /* ScrollViewOneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewOneController.swift; sourceTree = "<group>"; };
+		BFEB78E0264CB0120094D9B3 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		BFEBA886264C9CCF00D5201E /* ScrollApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scroll\U0010App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEBA889264C9CCF00D5201E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFEBA892264C9CD200D5201E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,6 +39,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BFEB78DA264CAF3E0094D9B3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFEB78DB264CAF500094D9B3 /* ScrollViewOneController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BFEB78DF264CB0070094D9B3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BFEB78E0264CB0120094D9B3 /* UIView+Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		BFEBA87D264C9CCF00D5201E = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +74,8 @@
 		BFEBA888264C9CCF00D5201E /* ScrollApp */ = {
 			isa = PBXGroup;
 			children = (
+				BFEB78DF264CB0070094D9B3 /* Utils */,
+				BFEB78DA264CAF3E0094D9B3 /* Controllers */,
 				BFEBA8A5264C9DE500D5201E /* Home */,
 				BFEBA8A4264C9DD000D5201E /* Main */,
 				BFEBA892264C9CD200D5201E /* Assets.xcassets */,
@@ -159,6 +181,8 @@
 			files = (
 				BFEBA8A8264C9E0700D5201E /* HomeUIFactory.swift in Sources */,
 				BFEBA8A2264C9D7D00D5201E /* HomeController.swift in Sources */,
+				BFEB78E1264CB0120094D9B3 /* UIView+Extensions.swift in Sources */,
+				BFEB78DC264CAF500094D9B3 /* ScrollViewOneController.swift in Sources */,
 				BFEBA88A264C9CCF00D5201E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
