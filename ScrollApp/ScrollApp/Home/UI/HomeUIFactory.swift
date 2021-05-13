@@ -10,7 +10,13 @@ import UIKit
 
 final class HomeUIFactory {
     static func makeHomeController() -> UIViewController {
-        return HomeController()
+        return HomeController(options: makeOptions())
+    }
+    
+    private static func makeOptions() -> [Option] {
+        [Option(id: "Option One", startHandler: {
+            print("Hola")
+        })]
     }
 }
 
