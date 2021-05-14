@@ -33,12 +33,10 @@ class ScrollViewOneController: UIViewController {
 
         scrollView.addSubview(contentView)
         contentView.fillSuperView()
-        contentView.setSize(width: view.widthAnchor)
+        contentView.setSize(width: view.widthAnchor, widthConstant: 200)
         contentView.setSize(height: view.bounds.height + 200)
         
         scrollView.fillSuperView()
-        scrollView.centerInSuperview()
-        scrollView.setSize(width: view.widthAnchor)
     }
     
     private func setupViews(_ views: UIView...) {

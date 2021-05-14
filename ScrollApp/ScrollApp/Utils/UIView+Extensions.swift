@@ -40,10 +40,10 @@ extension UIView {
         constraints.activate()
     }
     
-    func setSize(width: NSLayoutDimension? = nil, height: NSLayoutDimension? = nil) {
+    func setSize(width: NSLayoutDimension? = nil, widthConstant: CGFloat? = nil, height: NSLayoutDimension? = nil, heightConstant: CGFloat? = nil) {
         var constraints = [Constraint]()
-        if let width = width { constraints.append(widthAnchor.constraint(equalTo: width)) }
-        if let height = height { constraints.append(heightAnchor.constraint(equalTo: height)) }
+        if let width = width { constraints.append(widthAnchor.constraint(equalTo: width, constant: widthConstant.orZero)) }
+        if let height = height { constraints.append(heightAnchor.constraint(equalTo: height, constant:  heightConstant.orZero)) }
         constraints.activate()
     }
     
@@ -53,6 +53,10 @@ extension UIView {
         if let centerX = superview?.centerXAnchor { constraints.append(centerXAnchor.constraint(equalTo: centerX)) }
         constraints.activate()
     }
+}
+
+fileprivate extension Optional where Wrapped: Numeric {
+    var orZero: Wrapped { self ?? 0 }
 }
 
 fileprivate extension Array where Element == Constraint {
