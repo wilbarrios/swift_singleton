@@ -13,6 +13,8 @@
 		BF384293264A075500CA1170 /* UIView+Exentensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF384292264A075500CA1170 /* UIView+Exentensions.swift */; };
 		BF691E9C264A0ACD00114BD2 /* SnapshotTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF384281264A051400CA1170 /* SnapshotTest.framework */; };
 		BF691EA7264A0B3600114BD2 /* ProgrammaticControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF691EA6264A0B3600114BD2 /* ProgrammaticControllerTests.swift */; };
+		BFB69738265089C200BB99E2 /* UIViewController+Snapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB69737265089C200BB99E2 /* UIViewController+Snapshots.swift */; };
+		BFB69740265089F000BB99E2 /* XCTest+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB6973F265089F000BB99E2 /* XCTest+Snapshot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		BF691E97264A0ACD00114BD2 /* SnapshotTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapshotTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF691E9B264A0ACD00114BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF691EA6264A0B3600114BD2 /* ProgrammaticControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticControllerTests.swift; sourceTree = "<group>"; };
+		BFB69737265089C200BB99E2 /* UIViewController+Snapshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshots.swift"; sourceTree = "<group>"; };
+		BFB6973F265089F000BB99E2 /* XCTest+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+Snapshot.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 		BF1E8D4A264A0D57002E2415 /* SnapshotTestCITests */ = {
 			isa = PBXGroup;
 			children = (
+				BFB69736265089AF00BB99E2 /* Utils */,
 				BF1E8D4D264A0D57002E2415 /* Info.plist */,
 				BF1E8D5A264A0E0F002E2415 /* ProgrammaticControllerSnapshotTests.swift */,
 			);
@@ -134,6 +139,15 @@
 				BF691EA6264A0B3600114BD2 /* ProgrammaticControllerTests.swift */,
 			);
 			path = SnapshotTestTests;
+			sourceTree = "<group>";
+		};
+		BFB69736265089AF00BB99E2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BFB69737265089C200BB99E2 /* UIViewController+Snapshots.swift */,
+				BFB6973F265089F000BB99E2 /* XCTest+Snapshot.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB69740265089F000BB99E2 /* XCTest+Snapshot.swift in Sources */,
+				BFB69738265089C200BB99E2 /* UIViewController+Snapshots.swift in Sources */,
 				BF1E8D5B264A0E0F002E2415 /* ProgrammaticControllerSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

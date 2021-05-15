@@ -39,7 +39,7 @@ internal final class ProgrammaticController: UIViewController {
     }
     
     private func setupLayout() {
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = .systemBackground
         view.addSubviews(label)
         label.centerInSuperView()
     }
